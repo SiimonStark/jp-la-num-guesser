@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Guesser</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <header>
+    <hgroup>
+    <h1>Number Guesser</h1>
+    <p>-------</p>
+    <h4>Ultimate Challenger Edition</h4>
+    <p>-------</p>
+  </hgroup>
+  </header>
+<main>
+  <aside class="left-col">
+    <section class="rng">
+      <fieldset class="rng-set">
+        <legend><h3>Set Range</h3></legend>
+        <p id="min-rng">Min Range</p>
+        <input type="number" name="min" min="0">
+        <br>
+        <p id="max-rng">Max Range</p>
+        <input type="number" name="max" max="100">
+        <br>
+        <input type="submit" name="update" id="update">
+      </fieldset>
+    </section>
+    <section class="play-input">
+      <fieldset>
+        <legend>
+          <p>The Current Range is <var>min</var> to <var>max</var></p>
+        </legend>
+        <h3>Challenger 1</h3>
+        <p class="___">Name</p>
+        <input type="text" name="name1">
+        <p class="___">Guess</p>
+        <input type="text" name="guess1">
+        <br>
+        <h3>Challenger 2</h3>
+        <p class="___">Name</p>
+        <input type="text" name="name1">
+        <p class="___">Guess</p>
+        <input type="text" name="guess1">
+        <br>
+        <input type="submit" name="submit">
+        <input type="reset" name="nuke">
+        <input type="reset" name="reset">
+      </fieldset>
+    </section>
+    <section class="score">
+      <h3>Latest Score</h3>
+      <article class="current1">
+        <h4>Challenger 1 <var>name1</var></h4>
+        <p>current guess</p>
+        <var>guess1</var>
+        <var>low-high</var>
+      </article>
+      <article class="current2">
+        <h4>Challenger 2 <var>name2</var></h4>
+        <p>current guess</p>
+        <var>guess2</var>
+        <var>low-high</var>
+      </article>
+    </section>
+  </aside>
+  <aside class="right-col">
+    <section class="tally">
+      <article>
+        <h4>Challenger 1 <var>name1</var></h4> vs <h4>Challenger 2 <var>name2</var></h4>
+        <hr>
+        <h2>CHALLENGER <var>winner</var></h2>
+        <h2>WINNER</h2>
+        <hr>
+        <var>num-guesses</var>
+        <var>time</var>
+        <button type="reset" name="close">x</button>
+      </article>
+      <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
+    </section>
+  </aside>
+</main>
+</body>
+</html>
