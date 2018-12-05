@@ -4,83 +4,99 @@
   <title>Number Guesser</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
 <body>
   <header>
-    <hgroup>
-    <h1>Number Guesser</h1>
-    <p>-------</p>
-    <h4>Ultimate Challenger Edition</h4>
-    <p>-------</p>
-  </hgroup>
+    <h1><span class="h-num">NUMBER</span>GUESSER</h1>
+    <h4>---ULTIMATE CHALLENGER EDITION---</h4>
   </header>
-<main>
-  <aside class="left-col">
-    <section class="rng">
-      <fieldset class="rng-set">
-        <legend><h3>Set Range</h3></legend>
-        <p id="min-rng">Min Range</p>
-        <input type="number" name="min" min="0">
-        <br>
-        <p id="max-rng">Max Range</p>
-        <input type="number" name="max" max="100">
-        <br>
-        <input type="submit" name="update" id="update">
-      </fieldset>
-    </section>
-    <section class="play-input">
-      <fieldset>
-        <legend>
-          <p>The Current Range is <var>min</var> to <var>max</var></p>
-        </legend>
+  <main>
+    <aside class="left-col">
+      <section class="card-left">
+      <!-- <section class="rng"> -->
+        <h3>Set Range</h3>
+        <form class="rng-form">
+          <div class="txt-field">
+            <label class="input-label" id="min-rng">Min Range</label>
+            <input type="number" name="min" min="0" max="99">
+          </div>
+          <br>
+          <div class="txt-field">
+            <label class="input-label" id="max-rng">Max Range</label>
+            <input type="number" name="max" min="1" max="100">
+          </div>
+          <br>
+          <input type="submit" value="UPDATE" name="update" id="update">
+        </form>
+      </section>
+      <section class="card-left">
+      <!-- <section class="play-input"> -->
+        <p>The Current Range is <var>min</var> to <var>max</var></p>
         <h3>Challenger 1</h3>
-        <p class="___">Name</p>
-        <input type="text" name="name1">
-        <p class="___">Guess</p>
-        <input type="text" name="guess1">
-        <br>
+        <form class="chal1-form">
+          <div class="txt-field">
+            <label class="input-label">Name</label>
+            <input type="text" name="name1">
+          </div>
+          <div class="txt-field">
+            <label class="input-label">Guess</label>
+            <input type="text" name="guess1">
+          </div>
+        </form>
         <h3>Challenger 2</h3>
-        <p class="___">Name</p>
-        <input type="text" name="name1">
-        <p class="___">Guess</p>
-        <input type="text" name="guess1">
+        <form class="chal2-form">
+          <div class="txt-field">
+            <label class="input-label">Name</label>
+            <input type="text" name="name1">
+          </div>
+          <div class="txt-field">
+            <label class="input-label">Guess</label>
+            <input type="text" name="guess1">
+          </div>
+        </form>
         <br>
-        <input type="submit" name="submit">
-        <input type="reset" name="nuke">
-        <input type="reset" name="reset">
-      </fieldset>
-    </section>
-    <section class="score">
-      <h3>Latest Score</h3>
-      <article class="current1">
-        <h4>Challenger 1 <var>name1</var></h4>
-        <p>current guess</p>
-        <var>guess1</var>
-        <var>low-high</var>
-      </article>
-      <article class="current2">
-        <h4>Challenger 2 <var>name2</var></h4>
-        <p>current guess</p>
-        <var>guess2</var>
-        <var>low-high</var>
-      </article>
-    </section>
-  </aside>
-  <aside class="right-col">
-    <section class="tally">
-      <article>
-        <h4>Challenger 1 <var>name1</var></h4> vs <h4>Challenger 2 <var>name2</var></h4>
-        <hr>
-        <h2>CHALLENGER <var>winner</var></h2>
-        <h2>WINNER</h2>
-        <hr>
-        <var>num-guesses</var>
-        <var>time</var>
-        <button type="reset" name="close">x</button>
-      </article>
-      <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
-    </section>
-  </aside>
-</main>
+        <form class="buttons-x3">
+          <input type="submit" name="submit" value="SUBMIT GUESS">
+          <input type="reset" name="nuke" value="RESET GAME">
+          <input type="reset" name="reset" value="CLEAR GAME">
+        </form>
+      </section>
+      <section class="card-left">
+      <!-- <section class="score"> -->
+        <h3 id="latest">Latest Score</h3>
+        <br>
+        <div class="vs">
+        <article class="current1">
+          <h5>Challenger 1 <var>name1</var></h5>
+          <p>current guess</p>
+          <var>guess1</var>
+          <var>low-high</var>
+        </article>
+        <article class="current2">
+          <h5>Challenger 2 <var>name2</var></h5>
+          <p>current guess</p>
+          <var>guess2</var>
+          <var>low-high</var>
+        </article>
+      </div>
+      </section>
+    </aside>
+    <aside class="right-col">
+      <section class="tally">
+        <article class="card-right">
+          <h4>Challenger 1 <var>name1</var></h4> vs <h4>Challenger 2 <var>name2</var></h4>
+          <hr>
+          <h2>CHALLENGER <var>winner</var></h2>
+          <h2>WINNER</h2>
+          <hr>
+          <var>num-guesses</var>
+          <var>time</var>
+          <button type="reset" name="close">x</button>
+        </article>
+        <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
+      </section>
+    </aside>
+  </main>
 </body>
 </html>

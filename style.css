@@ -1,0 +1,194 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*HEADER STYLING*/
+header {
+  background-color: #404041;
+}
+
+/*H1 STYLING*/
+h1 {
+  text-align: center;
+  font-weight: 300;
+  color: #dd1972;
+  padding-top: 30px;
+  margin-bottom: 0;
+
+}
+
+.h-num {
+  font-weight: 700;
+}
+
+/*SUB HEADER*/
+h4 {
+  text-align: center;
+  margin-top: 0px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+/*Main Parent Container*/
+main {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  /*@media query*/
+}
+
+/*LEFT COLUMN*/
+.left-col {
+ /*display: flex;
+ justify-content: space-around;*/
+/* flex-direction: column;*/
+ width: 50%;
+ background-color: #f7f7f7;
+ border-right: 2px solid black;
+}
+
+.right-col {
+  background-color: #D1D2D4;
+  width: 50%;
+  /*display: flex;
+  justify-content: center;*/
+}
+
+.tally {
+  /*justify-content: center;*/
+}
+
+/*RANGE SECTION*/
+.rng {
+  border: 1px solid #d0d2d3;
+  width: 90%;
+  margin: 5%;
+  /*justify-content: center;*/
+}
+
+.rng-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 10px;
+
+}
+
+.txt-field {
+  display: flex;
+  flex-direction: column;
+}
+
+#update {
+  display: flex;
+}
+
+.vs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chal1-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chal2-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons-x3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*PLAY INPUT SECTION*/
+.play-input {
+/*  display: flex;*/
+  border: 1px solid #d0d2d3;
+  width: 90%;
+ /* justify-content: center;*/
+
+}
+
+/*score section*/
+.score {
+  display: flex;
+  border: 1px solid #d0d2d3;
+  width: 90%;
+/*  justify-content: center;
+*/}
+
+.tally {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-left {
+  background-color: #ffffff;
+  border: 2px solid #d0d2d3;
+  margin: 3%;
+  padding: 2%;
+}
+
+.card-right {
+  background-color: #ffffff;
+  border: 2px solid #6e6e6e;
+  margin: 5%;
+  padding: 2%;
+}
+
+/*RANGE HEADER*/
+h3 {
+
+}
+
+/*GROUP ALL INPUT LABELS TOGETHER TOO? MIN, MAX, NAMES, GUESSES.*/
+/*MIN RANGE*/
+
+.min-rng {
+
+}
+
+/*ADD CLASSES TO ALL BUTTONS? SO WE CAN BASE STYLE THEN STYLE FURTHER?*/
+/*I don't think this is written correctly, but just want to make sure to revisit it.*/
+input[type="submit"] {
+
+}
+
+
+
+/*for current range is... maybe we can class this out?*/
+legend p {
+
+}
+
+
+
+.current1 {
+
+}
+
+.current2 {
+  
+}
+
+/*SHOULD WE ADD A CLASS TO THE CURRENT GUESS AND STYLE TOGETHER?*/
+p .current-guess {
+
+}
+
+
+/*ADD CLASS TO LOW-HIGH AND STYLE TOGETHER?*/
+var .low-hight {
+
+}
+
+
+
+
+
+
