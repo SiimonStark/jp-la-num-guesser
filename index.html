@@ -40,7 +40,7 @@
           </div>
           <div class="txt-field">
             <label class="input-label">Guess</label>
-            <input type="text" name="guess1">
+            <input id="js-clear-input1" type="text" name="guess1">
           </div>
         </form>
         <h3 class="chall-head">Challenger 2</h3>
@@ -51,14 +51,14 @@
           </div>
           <div class="txt-field">
             <label class="input-label">Guess</label>
-            <input type="text" name="guess1">
+            <input id="js-clear-input2" type="text" name="guess1">
           </div>
         </form>
         <br>
         <form class="buttons">
           <input type="submit" name="submit" value="SUBMIT GUESS">
           <input type="reset" name="nuke" value="RESET GAME">
-          <input type="reset" name="reset" value="CLEAR GAME">
+          <input type="button" name="reset" onclick="clearFields()" value="CLEAR GAME">
         </form>
       </section>
       <section class="card-left">
