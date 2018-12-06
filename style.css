@@ -140,6 +140,10 @@ input[value] {
   margin: 4px;
 }
 
+input[value]:hover {
+  background-color: #DD1972;
+  }
+
 /*.buttons-x3 {
   display: flex;
   justify-content: space-around;
