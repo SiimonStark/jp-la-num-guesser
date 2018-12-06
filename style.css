@@ -120,17 +120,14 @@ input {
   margin-left: 5px;
 }
 
-.chal1-form {
+.chal-form {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
-.chal2-form {
-  display: flex;
-  justify-content: space-around;
-}
 
-input[value] {
+button {
   font-size: .95rem;
   font-weight: bold;
   background-color: gray;
