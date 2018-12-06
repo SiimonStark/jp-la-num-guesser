@@ -109,6 +109,7 @@ input {
   display: flex;
 }
 
+
 .vs {
   display: flex;
   justify-content: space-between;
@@ -209,14 +210,55 @@ legend p {
 
 }
 
+/* Chal-1 VS Chal-2 */
 
+.card-reset {
+  padding: 0;
+  margin: 0;
+}
+
+#latest {
+  /*position: absolute;
+  display: flex;
+  align-items: flex-start;*/
+}
+
+.vs {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  /*margin-top: 5px;*/
+}
 
 .current1 {
-
+  width: 50%;
+  border-right: 2px solid lightgray;
+  /*display: flex;*/
+  padding: 5px;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .current2 {
-  
+  width: 50%;
+  padding: 5px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.chal {
+  font-weight: 700;
+}
+
+.js-big-num {
+  color: #f74d98;
+  font-weight: 700;
+  font-size: 30pt;
+}
+
+.js-low-high {
+  color: gray;
+  font-weight: 400;
 }
 
 /*SHOULD WE ADD A CLASS TO THE CURRENT GUESS AND STYLE TOGETHER?*/
