@@ -13,92 +13,6 @@
   <main>
     <aside class="left-col">
       <section class="card-left">
-<<<<<<< HEAD
-      <!-- <section class="rng"> -->
-        <h3 class="rng-head">Set Range</h3>
-        <form class="rng-form">
-          <div class="txt-field">
-            <label class="input-label" id="min-rng">Min Range</label>
-            <input type="number" name="min" min="0" max="99">
-          </div>
-          <br>
-          <div class="txt-field">
-            <label class="input-label" id="max-rng">Max Range</label>
-            <input type="number" name="max" min="1" max="100">
-          </div>
-          <br>
-          <input type="submit" value="UPDATE" name="update" id="update">
-        </form>
-      </section>
-      <section class="card-left">
-        <p>The Current Range is <var>min</var> to <var>max</var></p>
-        <h3 class="chall-head">Challenger 1</h3>
-        <form class="chal1-form">
-          <div class="txt-field">
-            <label class="input-label name">Name</label>
-            <input type="text" name="name1">
-          </div>
-          <div class="txt-field">
-            <label class="input-label">Guess</label>
-            <input id="js-clear-input1" type="text" name="guess1">
-          </div>
-        </form>
-        <h3 class="chall-head">Challenger 2</h3>
-        <form class="chal2-form">
-          <div class="txt-field">
-            <label class="input-label name">Name</label>
-            <input type="text" name="name1">
-          </div>
-          <div class="txt-field">
-            <label class="input-label">Guess</label>
-            <input id="js-clear-input2" type="text" name="guess1">
-          </div>
-        </form>
-        <br>
-        <form class="buttons">
-          <button id="js-submit">SUBMIT GUESS</button>
-          <input type="reset" name="nuke" value="RESET GAME">
-          <input type="button" name="reset" onclick="clearFields()" value="CLEAR GAME">
-        </form>
-      </section>
-      <section class="card-left">
-      <!-- <section class="score"> -->
-        <h3 class="card-reset" id="latest">Latest Score</h3>
-        <div class="vs">
-        <article class="current1">
-          <h5 class="card-reset" class="chal">Challenger 1 <var>name1</var></h5>
-          <p class="card-reset">current guess</p>
-          <var class="js-big-num">97</var><br>
-          <var class="js-low-high">low-high</var>
-        </article>
-        <article class="current2">
-          <h5 class="card-reset" class="chal">Challenger 2 <var>name2</var></h5>
-          <p class="card-reset">current guess</p>
-          <var class="js-big-num">3</var><br>
-          <var class="js-low-high">low-high</var>
-        </article>
-      </div>
-      </section>
-    </aside>
-    <aside class="right-col">
-      <section class="tally">
-        <article class="card-right">
-          <h4>Challenger 1 <var>name1</var></h4> vs <h4>Challenger 2 <var>name2</var></h4>
-          <hr>
-          <h2>CHALLENGER <var>winner</var></h2>
-          <h2>WINNER</h2>
-          <hr>
-          <var>num-guesses</var>
-          <var>time</var>
-          <button type="reset" name="close">x</button>
-        </article>
-        <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
-      </section>
-    </aside>
-  </main>
-</body>
-</html>
-=======
         <!-- <section class="rng"> -->
           <h3 class="rng-head">Set Range</h3>
           <form class="rng-form">
@@ -106,85 +20,73 @@
               <label class="input-label" id="min-rng">Min Range</label>
               <input type="number" name="min" min="0" max="99">
             </div>
-            <br>
             <div class="txt-field">
               <label class="input-label" id="max-rng">Max Range</label>
               <input type="number" name="max" min="1" max="100">
             </div>
-            <br>
-            <input type="submit" value="UPDATE" name="update" id="update">
+            <button>UPDATE</button>
           </form>
         </section>
         <section class="card-left">
-          <p>The Current Range is <var>min</var> to <var>max</var></p>
-          <h3 class="chall-head">Challenger 1</h3>
-          <form class="chal1-form">
+          <form class="chal-form">
+            <p>The Current Range is min to max</p>
+            <h3 class="chall-head">Challenger 1</h3>
             <div class="txt-field">
               <label class="input-label name">Name</label>
               <input id="js-chal1" type="text" name="name1">
-            </div>
-            <div class="txt-field">
               <label class="input-label">Guess</label>
               <input id="js-clear-input1" type="text" name="guess1">
             </div>
-            <!-- </form> -->
             <h3 class="chall-head">Challenger 2</h3>
-            <!-- <form class="chal2-form"> -->
-              <div class="txt-field">
-                <label class="input-label name">Name</label>
-                <input id="js-chal2" type="text" name="name1">
-              </div>
-              <div class="txt-field">
-                <label class="input-label">Guess</label>
-                <input id="js-clear-input2" type="text" name="guess1">
-              </div>
-            </form>
-            <!-- <br> -->
-            <button id="js-submit">Submit Guess</button>
-            <form class="buttons">
-              <!-- <input type="button" id="js-submit" name="submit" value="SUBMIT GUESS"> -->
-              <input type="button" name="nuke" value="RESET GAME">
-              <input type="button" name="reset" onclick="clearFields()" value="CLEAR GAME">
-            </form>
-          </section>
-          <section class="card-left">
-            <!-- <section class="score"> -->
-              <h3 class="card-reset" id="latest">Latest Score</h3>
-              <div class="vs">
-                <article class="current1">
-                  <h5 class="card-reset js-updateChal1">Challenger 1 Name</h5>
-                  <p class="card-reset">current guess</p>
-                  <var class="js-big-num">97</var><br>
-                  <var class="js-low-high">low-high</var>
-                </article>
-                <article class="current2">
-                  <h5 class="card-reset js-updateChal2">Challenger 2 Name</h5>
-                  <p class="card-reset">current guess</p>
-                  <var class="js-big-num">3</var>
-                  <var class="js-low-high">low-high</var>
-                </article>
-              </div>
-            </section>
-          </aside>
-          <aside class="right-col">
-            <section class="tally">
-              <article class="card-right">
-                <h4 class="js-updateChal1">Challenger 1 Name</h4> 
-                vs 
-                <h4 class="js-updateChal2">Challenger 2 Name</h4>
-                <hr>
-                <h2>CHALLENGER <var>winner</var></h2>
-                <h2>WINNER</h2>
-                <hr>
-                <var>num-guesses</var>
-                <var>time</var>
-                <button type="reset" name="close">x</button>
-              </article>
-              <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
-            </section>
-          </aside>
-        </main>
-        <script src="scripts.js"></script>
-      </body>
-      </html>
->>>>>>> f82c5a8117054820be6542c15e4a6642da640a6b
+            <div class="txt-field">
+              <label class="input-label name">Name</label>
+              <input id="js-chal2" type="text" name="name1">
+              <label class="input-label">Guess</label>
+              <input id="js-clear-input2" type="text" name="guess1">
+            </div>
+            <div class="button">
+              <button id="js-submit">SUBMIT GAME</button>
+              <button id="js-reset">RESET GAME</button>
+              <button id="js-clear">CLEAR GAME</button>
+            </div>
+          </form>
+        </section>
+        <section class="card-left">
+          <h3 class="card-reset" id="latest">Latest Score</h3>
+          <div class="vs">
+            <article class="current1">
+              <h5 class="card-reset js-updateChal1">Challenger 1 Name</h5>
+              <p class="card-reset">current guess</p>
+              <var class="js-big-num">97</var><br>
+              <var class="js-low-high">low-high</var>
+            </article>
+            <article class="current2">
+              <h5 class="card-reset js-updateChal2">Challenger 2 Name</h5>
+              <p class="card-reset">current guess</p>
+              <var class="js-big-num">3</var>
+              <var class="js-low-high">low-high</var>
+            </article>
+          </div>
+        </section>
+      </aside>
+      <aside class="right-col">
+        <section class="tally">
+          <article class="card-right">
+            <h4 class="js-updateChal1">Challenger 1 Name</h4> 
+            vs 
+            <h4 class="js-updateChal2">Challenger 2 Name</h4>
+            <hr>
+            <h2>CHALLENGER <var>winner</var></h2>
+            <h2>WINNER</h2>
+            <hr>
+            <var>num-guesses</var>
+            <var>time</var>
+            <button type="reset" name="close">x</button>
+          </article>
+          <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
+        </section>
+      </aside>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+  </html>
