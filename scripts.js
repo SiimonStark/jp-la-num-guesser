@@ -36,6 +36,22 @@ var getUpdate = document.querySelector("#js-update");
 
 /////////////////////////////////////////////////////////////
 
+//********************************************************
+//  if(minInput.value > maxInput.value){
+//    alert.('Please Choose a Value less than the minimum')
+//   };
+//********************************************************
+//  var winningLotto = withinRng
+//  function withinRng (){
+//    
+//  }
+//********************************************************
+
+function updateRng(){
+    minUpdate.innerText = minInput.value;
+    maxUpdate.innerText = maxInput.value;
+
+}
 // Event Listeners 
 getSubmit.addEventListener('click', submitClick);
 
