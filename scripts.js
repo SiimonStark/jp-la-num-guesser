@@ -25,20 +25,26 @@ getSubmit.addEventListener('click', submitClick);
 
 //*******************************************************
 //*****min-max input field, changing the DOM*************
-var minInput = document.getElementById("js-min-input");
-var maxInput = document.getElementById("js-max-input");
+var minInput = document.querySelector("#js-min-input");
+var maxInput = document.querySelector("#js-max-input");
 
-var minUpdate = document.querySelectorAll("js-min-update");
+var minUpdate = document.getElementById("js-min-update");
 var maxUpdate = document.getElementById("js-max-update");
 
-function update (e){
+var getUpdate = document.querySelector("#js-update");
+
+function updateClick(e){
   e.preventDefault();
-    var maxUpdate = parseInt(Math.random) || 1;
-    var minUpdate = parseInt(Math.random) || 100;
+  console.log("in update rng");
+  updateRng();
 }
 
-var getUpdate = document.querySelector("#js-update");
-getUpdate.addEventListener('click', update);
+function updateRng(){
+    minUpdate.innerText = minInput.value;
+    maxUpdate.innerText = maxInput.value;
+}
+
+getUpdate.addEventListener('click', updateRng);
 // ******************************************************
 // Don't need for loops
 // create the variables in a global scope
