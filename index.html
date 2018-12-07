@@ -35,14 +35,14 @@
               <label class="input-label name">Name</label>
               <input id="js-chal1" type="text" name="name1">
               <label class="input-label">Guess</label>
-              <input id="js-clear-input1" type="text" name="guess1">
+              <input id="js-clear-input1" class="js-guess-1" type="text" name="guess1">
             </div>
             <h3 class="chall-head">Challenger 2</h3>
             <div class="txt-field">
               <label class="input-label name">Name</label>
               <input id="js-chal2" type="text" name="name">
-              <label class="input-label">Guess</label>
-              <input id="js-clear-input2" type="text" name="guess1">
+              <label id="js-guess-2" class="input-label">Guess</label>
+              <input id="js-clear-input2" class="js-guess-2" type="text" name="guess2">
             </div>
             <div class="button">
               <button id="js-submit">SUBMIT GAME</button>
@@ -57,13 +57,13 @@
             <article class="current1">
               <h5 class="card-reset js-updateChal1">Challenger 1 Name</h5>
               <p class="card-reset">current guess</p>
-              <var class="js-big-num">97</var><br>
+              <p class="js-big-num" id="js-newguess-1">97</p>
               <var class="js-low-high">low-high</var>
             </article>
             <article class="current2">
               <h5 class="card-reset js-updateChal2">Challenger 2 Name</h5>
               <p class="card-reset">current guess</p>
-              <var class="js-big-num">3</var>
+              <p class="js-big-num" id="js-newguess-2">3</p>
               <var class="js-low-high">low-high</var>
             </article>
           </div>
