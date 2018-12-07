@@ -18,18 +18,21 @@
           <form class="rng-form">
             <div class="txt-field">
               <label class="input-label" id="min-rng">Min Range</label>
-              <input type="number" name="min" min="0" max="99">
+              <input id="js-min-input" type="number" name="min" min="0" max="99">
             </div>
             <div class="txt-field">
               <label class="input-label" id="max-rng">Max Range</label>
-              <input type="number" name="max" min="1" max="100">
+              <input id="js-max-input"type="number" name="max" min="1" max="100">
             </div>
-            <button>UPDATE</button>
+            <button id="js-update">UPDATE</button>
           </form>
         </section>
         <section class="card-left">
           <form class="chal-form">
-            <p>The Current Range is min to max</p>
+            <p>The Current Range is 
+              <span id="js-min-update">min</span>
+               to 
+              <span id="js-max-update">max</span></p>
             <h3 class="chall-head">Challenger 1</h3>
             <div class="txt-field">
               <label class="input-label name">Name</label>
