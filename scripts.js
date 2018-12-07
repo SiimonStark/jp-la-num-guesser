@@ -3,7 +3,29 @@
   var chal2Input = document.getElementById("js-chal2");
   //
   var chal1Update = document.querySelectorAll(".js-updateChal1");
-  var chal2Update = document.querySelectorAll('.js-updatechal2');
+  var chal2Update = document.querySelectorAll(".js-updatechal2");
+
+//*******************************************************
+//*****min-max input field, changing the DOM*************
+var minInput = document.getElementById("js-min-input");
+var maxInput = document.getElementById("js-max-input");
+
+var minUpdate = document.querySelectorAll("js-min-update");
+var maxUpdate = document.getElementById("js-max-update");
+
+function update (e){
+  e.preventDefault();
+    var maxUpdate = parseInt(Math.random) || 1;
+    var minUpdate = parseInt(Math.random) || 100;
+}
+
+var getUpdate = document.querySelector("#js-update");
+getUpdate.addEventListener('click', update);
+// ******************************************************
+// Don't need for loops
+// create the variables in a global scope
+// Research Parseinit
+// ******************************************************
 
 function clearFields(e) {
   e.preventDefault();
@@ -32,7 +54,7 @@ clearButton.addEventListener('click', clearFields);
 //   }
 // }
 
-function update(e) {
+function submit(e) {
   e.preventDefault();
   var chal2Input = document.getElementById("js-chal2").value;
   var chal2Update = document.querySelectorAll(".js-updateChal2");
@@ -48,4 +70,4 @@ function update(e) {
 
 
 var getSubmit = document.querySelector("#js-submit");
-getSubmit.addEventListener('click', update);
+getSubmit.addEventListener('click', submit);
