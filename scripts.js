@@ -17,8 +17,8 @@ var largeGuess2 = document.getElementById("js-newguess-2");
 // SUBMIT BUTTON VARIABLE
 var getSubmit = document.querySelector("#js-submit");
 
-//*******************************************************
-//*****min-max input field, changing the DOM*************
+// RANDOM NUM VARIABLE
+var numGenerated
 
 //UPDATE FIELDS VARIABLES
 var minInput = document.querySelector("#js-min-input");
@@ -48,17 +48,16 @@ var getUpdate = document.querySelector("#js-update");
 //********************************************************
 
 function updateRng(){
-    minUpdate.innerText = minInput.value;
-    maxUpdate.innerText = maxInput.value;
-
+  minUpdate.innerText = minInput.value;
+  maxUpdate.innerText = maxInput.value;
 }
+
 // Event Listeners 
 getSubmit.addEventListener('click', submitClick);
 
 getUpdate.addEventListener('click', updateRng);
 
 clearButton.addEventListener('click', clearFields);
-
 
 /////////////////////////////////////////////////////////////
 // !!!!!!!! I TOOK THIS OUT AND ADDED THE PREVENT DEFAULT TO 
@@ -70,10 +69,14 @@ clearButton.addEventListener('click', clearFields);
 //   updateRng();
 // }
 
+//RANDOM NUM GENERATOR
 function updateRng(e){
   e.preventDefault();
   minUpdate.innerText = minInput.value;
   maxUpdate.innerText = maxInput.value;
+  min = parseInt(minInput.value) || 1;
+  max = parseInt(maxInput.value) || 100;
+  numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
 }
 
 // ******************************************************
