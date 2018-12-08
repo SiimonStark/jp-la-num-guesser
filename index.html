@@ -17,12 +17,16 @@
           <h3 class="rng-head">Set Range</h3>
           <form class="rng-form">
             <div class="txt-field">
-              <label class="input-label" id="min-rng">Min Range</label>
-              <input id="js-min-input" type="number" name="min" min="0" max="99">
+              <section class="min-input">
+                <label class="input-label" id="min-rng">Min Range</label>
+                <input class= "rng-input" id="js-min-input" type="number" name="min" min="0" max="99">
+              </section>
             </div>
             <div class="txt-field">
-              <label class="input-label" id="max-rng">Max Range</label>
-              <input id="js-max-input" type="number" name="max" min="1" max="100">
+              <section class="max-input">
+                <label class="input-label" id="max-rng">Max Range</label>
+                <input class= "rng-input" id="js-max-input" type="number" name="max" min="1" max="100">
+              </section>
             </div>
             <button id="js-update">UPDATE</button>
           </form>
@@ -35,17 +39,26 @@
               <span id="js-max-update">max</span></p>
             <h3 class="chall-head">Challenger 1</h3>
             <div class="txt-field">
-              <label class="input-label name">Name</label>
-              <input id="js-chal1" type="text" name="name1" value="john">
-              <label class="input-label">Guess</label>
-              <input id="js-clear-input1" class="js-guess-1 input-field" type="text" name="guess1">
+              <section class="name-input">
+                <label class="input-label name">Name</label>
+                <input class="error-box" id="js-chal1" type="text" name="name1" value="john">
+                <p class="error"><img src="error-icon.svg">Enter a name</p>
+              </section>
+              <section class="guess-input">
+                <label class="input-label">Guess</label>
+                <input id="js-clear-input1" class="js-guess-1 input-field" type="text" name="guess1">
+              </section>
             </div>
             <h3 class="chall-head">Challenger 2</h3>
             <div class="txt-field">
-              <label class="input-label name">Name</label>
-              <input id="js-chal2" type="text" name="name">
-              <label id="js-guess-2" class="input-label">Guess</label>
-              <input id="js-clear-input2" class="js-guess-2 input-field" type="text" name="guess2">
+              <section class="name-input">
+                <label class="input-label name">Name</label>
+                <input id="js-chal2" type="text" name="name">
+              </section>
+              <section class="guess-input">
+                <label id="js-guess-2" class="input-label">Guess</label>
+                <input id="js-clear-input2" class="js-guess-2 input-field" type="text" name="guess2">
+              </section>
             </div>
             <div class="button">
               <button id="js-submit">SUBMIT GUESS</button>
@@ -59,15 +72,15 @@
           <div class="vs">
             <article class="current1">
               <h5 class="card-reset js-updateChal1">Challenger 1 Name</h5>
-              <p class="card-reset">current guess</p>
-              <p class="js-big-num" id="js-newguess-1">97</p>
-              <var class="js-low-high1">low-high</var>
+              <p class="card-reset current">current guess</p>
+              <p class="js-big-num" id="js-newguess-1">#</p>
+              <p class="js-low-high1">low-high</p>
             </article>
             <article class="current2">
               <h5 class="card-reset js-updateChal2">Challenger 2 Name</h5>
-              <p class="card-reset">current guess</p>
-              <p class="js-big-num" id="js-newguess-2">3</p>
-              <var class="js-low-high2">low-high</var>
+              <p class="card-reset current">current guess</p>
+              <p class="js-big-num" id="js-newguess-2">#</p>
+              <p class="js-low-high2">low-high</p>
             </article>
           </div>
         </section>

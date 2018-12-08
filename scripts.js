@@ -125,7 +125,7 @@ function resetGame(e) {
 // Research Parseinit
 // ******************************************************
 
-// SUBMIT FUNCTION TO RUN THE TWO BELOW
+// SUBMIT BUTTON FUNCTION
 function submitClick(e){
   e.preventDefault();
   updateGuesses();

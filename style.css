@@ -48,9 +48,6 @@ main {
 
 /*LEFT COLUMN*/
 .left-col {
- /*display: flex;
- justify-content: space-around;*/
-/* flex-direction: column;*/
  width: 50%;
  background-color: #f7f7f7;
  border-right: 2px solid black;
@@ -63,16 +60,16 @@ main {
   justify-content: center;*/
 }
 
-.tally {
-  /*justify-content: center;*/
-}
-
 /*RANGE SECTION*/
 .rng {
-  border: 1px solid #d0d2d3;
-  width: 90%;
-  margin: 5%;
-  /*justify-content: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.min-input,
+.max-input {
+  display: flex;
+  flex-direction: column;
 }
 
 .rng-head {
@@ -84,14 +81,23 @@ main {
   justify-content: space-around;
   align-items: flex-end;
   padding-bottom: 10px;
-
 }
 
 .txt-field {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name-input {
+  display: flex;
   flex-direction: column;
 }
 
+.guess-input {
+  display: flex;
+  flex-direction: column;
+}
 .name {
   width: 290px;
 }
@@ -117,7 +123,8 @@ input {
 
 .chall-head {
   margin-bottom: 4px;
-  margin-left: 5px;
+/*  margin-left: 5px;
+*/  margin-top: 5px;
 }
 
 .chal-form {
@@ -125,7 +132,6 @@ input {
   flex-direction: column;
   justify-content: space-around;
 }
-
 
 button {
   font-size: .95rem;
@@ -137,22 +143,22 @@ button {
   margin: 4px;
 }
 
-input[value]:hover {
+button:hover {
   background-color: #DD1972;
   }
 
-/*.buttons-x3 {
-  display: flex;
-  justify-content: space-around;
+.input-field {
+  margin-bottom: 15px;
 }
-*/
+
+.rng-head {
+  margin-bottom: 15px;
+}
+
 /*PLAY INPUT SECTION*/
 .play-input {
-/*  display: flex;*/
   border: 1px solid #d0d2d3;
   width: 90%;
- /* justify-content: center;*/
-
 }
 
 /*score section*/
@@ -186,33 +192,24 @@ input[value]:hover {
   padding: 2%;
 }
 
-/*RANGE HEADER*/
-h3 {
-
+/*ERROR MESSAGE*/
+.error {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #dd1972;
 }
 
-/*GROUP ALL INPUT LABELS TOGETHER TOO? MIN, MAX, NAMES, GUESSES.*/
-/*MIN RANGE*/
-
-.min-rng {
-
+.error-box {
+  border-color: #dd1972;
 }
 
-/*ADD CLASSES TO ALL BUTTONS? SO WE CAN BASE STYLE THEN STYLE FURTHER?*/
-/*I don't think this is written correctly, but just want to make sure to revisit it.*/
-input[type="submit"] {
-
-}
-
-
-
-/*for current range is... maybe we can class this out?*/
-legend p {
-
+img {
+  width: 15px;
+  margin-top: 7px;
+  margin-right: 3px;
 }
 
 /* Chal-1 VS Chal-2 */
-
 .card-reset {
   padding: 0;
   margin: 0;
@@ -251,10 +248,19 @@ legend p {
   font-weight: 700;
 }
 
+h5 {
+  font-size: 16px;
+}
+
+.current {
+  font-size: 15px;
+}
+
 .js-big-num {
   color: #f74d98;
   font-weight: 700;
-  font-size: 30pt;
+  font-size: 60px;
+  margin-bottom: 0px;
 }
 
 .js-low-high {
