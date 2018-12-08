@@ -92,7 +92,7 @@ function resetGame(e) {
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
 } 
 
-// SUBMIT FUNCTION TO RUN THE TWO BELOW
+// SUBMIT BUTTON FUNCTION
 function submitClick(e){
   e.preventDefault();
   updateGuesses();
