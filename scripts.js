@@ -28,11 +28,10 @@ var maxInput = document.querySelector("#js-max-input");
 var minUpdate = document.getElementById("js-min-update");
 var maxUpdate = document.getElementById("js-max-update");
 
-// CLEAR BUTTON VARIABLE
+// BUTTON VARIABLES
 var clearButton = document.querySelector("#js-clear");
-
-//UPDATE BUTTON VARIABLE
 var getUpdate = document.querySelector("#js-update");
+var resetButton = document.querySelector("#js-reset");
 
 /////////////////////////////////////////////////////////////
 
@@ -47,10 +46,10 @@ var getUpdate = document.querySelector("#js-update");
 //  }
 //********************************************************
 
-function updateRng(){
-  minUpdate.innerText = minInput.value;
-  maxUpdate.innerText = maxInput.value;
-}
+// function updateRng(){
+//   minUpdate.innerText = minInput.value;
+//   maxUpdate.innerText = maxInput.value;
+// }
 
 // Event Listeners 
 getSubmit.addEventListener('click', submitClick);
@@ -58,6 +57,10 @@ getSubmit.addEventListener('click', submitClick);
 getUpdate.addEventListener('click', updateRng);
 
 clearButton.addEventListener('click', clearFields);
+
+resetButton.addEventListener('click', resetGame);
+
+guess1.addEventListener('keyup', areFieldsEmpty);
 
 /////////////////////////////////////////////////////////////
 // !!!!!!!! I TOOK THIS OUT AND ADDED THE PREVENT DEFAULT TO 
@@ -79,6 +82,20 @@ function updateRng(e){
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
 }
 
+//RESET GAME (CLEAR FIELDS AND GEN NEW NUMBER)
+function resetGame(e) {
+  e.preventDefault();
+  document.getElementById("js-clear-input1").value = "";
+  document.getElementById("js-clear-input2").value = "";
+  document.getElementById("js-chal1").value = "";
+  document.getElementById("js-chal2").value = "";
+  minUpdate.innerText = minInput.value;
+  maxUpdate.innerText = maxInput.value;
+  min = parseInt(minInput.value) || 1;
+  max = parseInt(maxInput.value) || 100;
+  numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
+} 
+
 // ******************************************************
 // Don't need for loops
 // create the variables in a global scope
@@ -88,9 +105,9 @@ function updateRng(e){
 // SUBMIT FUNCTION TO RUN THE TWO BELOW
 function submitClick(e){
   e.preventDefault();
-  console.log("in submit");
   updateGuesses();
   update();
+
 }
 
 //UPDATE GUESSES IN CARDS
@@ -115,5 +132,21 @@ function clearFields(e) {
   document.getElementById("js-clear-input1").value = "";
   document.getElementById("js-clear-input2").value = "";
 } 
+
+
+
+//ARE FIELDDS EMPTY? ONLY WORKS FOR FIRST GUESS FIELD.
+//IMPLEMENT FOR LOOP TO TARGET SECOND AS WELL?
+function areFieldsEmpty(e) {
+  e.preventDefault();
+  clearButton.disabled = false;
+}
+
+//RESET GAME ENABLED FUNC CALLED IN SUBMITCLICK
+
+
+
+
+
 
 
