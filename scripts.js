@@ -82,7 +82,7 @@ function updateRng(e){
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
 }
 
-//
+//RESET GAME (CLEAR FIELDS AND GEN NEW NUMBER)
 function resetGame(e) {
   e.preventDefault();
   document.getElementById("js-clear-input1").value = "";
@@ -105,9 +105,9 @@ function resetGame(e) {
 // SUBMIT FUNCTION TO RUN THE TWO BELOW
 function submitClick(e){
   e.preventDefault();
-  console.log("in submit");
   updateGuesses();
   update();
+
 }
 
 //UPDATE GUESSES IN CARDS
@@ -141,6 +141,8 @@ function areFieldsEmpty(e) {
   e.preventDefault();
   clearButton.disabled = false;
 }
+
+//RESET GAME ENABLED FUNC CALLED IN SUBMITCLICK
 
 
 
