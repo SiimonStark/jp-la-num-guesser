@@ -34,23 +34,46 @@ var clearButton = document.querySelector("#js-clear");
 //UPDATE BUTTON VARIABLE
 var getUpdate = document.querySelector("#js-update");
 
+//DOM manipulation for lowHigh text
+var lowHigh1 = document.querySelector(".js-low-high1");
+var lowHigh2 = document.querySelector(".js-low-high2");
+
 /////////////////////////////////////////////////////////////
 
 //********************************************************
-//  if(minInput.value > maxInput.value){
-//    alert.('Please Choose a Value less than the minimum')
-//   };
+ // function declareWinner(){
+ // 	e.preventDefault();
+ 	function player1Win() {
+
+
+ 		if (guess1.value > numGenerated){
+ 			lowHigh1.innerText = "that's too high";
+ 		} else if (guess1.value < numGenerated){
+ 			lowHigh1.innerText = "that's too low";
+ 		} else {
+ 			lowHigh1.innerText = "Winner"
+ 		}
+ 		// debugger
+ 	}
+ 	function player2Win(){
+ 		if (guess2.value > numGenerated){
+ 			lowHigh2.innerText = "that's too high";
+ 		} else if (guess2.value < numGenerated){
+ 			lowHigh2.innerText = "that's too low";
+ 		} else {
+ 			lowHigh2.innerText = "Winner";
+ 		}
+ 		// debugger
+ 	}
+ // };
 //********************************************************
-//  var winningLotto = withinRng
-//  function withinRng (){
-//    
-//  }
+// 
 //********************************************************
 
-function updateRng(){
-  minUpdate.innerText = minInput.value;
-  maxUpdate.innerText = maxInput.value;
-}
+// function updateRng(){
+//   minUpdate.innerText = minInput.value;
+//   maxUpdate.innerText = maxInput.value;
+// }
 
 // Event Listeners 
 getSubmit.addEventListener('click', submitClick);
@@ -91,6 +114,8 @@ function submitClick(e){
   console.log("in submit");
   updateGuesses();
   update();
+  player1Win();
+  player2Win();
 }
 
 //UPDATE GUESSES IN CARDS
