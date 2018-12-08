@@ -21,6 +21,9 @@ var getSubmit = document.querySelector("#js-submit");
 var numGenerated
 
 //UPDATE FIELDS VARIABLES
+// var min = parseInt(minInput.value);
+// Why does this break the code??
+// var max = parseInt(maxInput.value);
 var minInput = document.querySelector("#js-min-input");
 var maxInput = document.querySelector("#js-max-input");
 
@@ -40,41 +43,16 @@ var lowHigh2 = document.querySelector(".js-low-high2");
 /////////////////////////////////////////////////////////////
 
 //********************************************************
- // function declareWinner(){
- // 	e.preventDefault();
- 	function player1Win() {
-
-
- 		if (guess1.value > numGenerated){
- 			lowHigh1.innerText = "that's too high";
- 		} else if (guess1.value < numGenerated){
- 			lowHigh1.innerText = "that's too low";
- 		} else {
- 			lowHigh1.innerText = "Winner"
- 		}
- 		// debugger
- 	}
- 	function player2Win(){
- 		if (guess2.value > numGenerated){
- 			lowHigh2.innerText = "that's too high";
- 		} else if (guess2.value < numGenerated){
- 			lowHigh2.innerText = "that's too low";
- 		} else {
- 			lowHigh2.innerText = "Winner";
- 		}
- 		// debugger
- 	}
- // };
+//Justin Working on: Form Validation
 //********************************************************
-// 
+function validateRng(){
+	if (parseInt(minInput.value) > parseInt(maxInput.value)){
+			alert("Please choose a value lower than your Max!!");
+	} 
+}
 //********************************************************
 
-// function updateRng(){
-//   minUpdate.innerText = minInput.value;
-//   maxUpdate.innerText = maxInput.value;
-// }
-
-// Event Listeners 
+//***************Event Listeners****************** 
 getSubmit.addEventListener('click', submitClick);
 
 getUpdate.addEventListener('click', updateRng);
@@ -85,21 +63,16 @@ resetButton.addEventListener('click', resetGame);
 
 guess1.addEventListener('keyup', areFieldsEmpty);
 
-/////////////////////////////////////////////////////////////
-// !!!!!!!! I TOOK THIS OUT AND ADDED THE PREVENT DEFAULT TO 
-//FUNCTION BELOW !!!!!!!!
+//////////////////////////////////////////////////////////
 
-// function updateClick(e){
-//   e.preventDefault();
-//   console.log("in update rng");
-//   updateRng();
-// }
+//***************FUNCTIONS************************
 
 //RANDOM NUM GENERATOR
 function updateRng(e){
   e.preventDefault();
   minUpdate.innerText = minInput.value;
   maxUpdate.innerText = maxInput.value;
+  validateRng();
   min = parseInt(minInput.value) || 1;
   max = parseInt(maxInput.value) || 100;
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
@@ -118,12 +91,6 @@ function resetGame(e) {
   max = parseInt(maxInput.value) || 100;
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
 } 
-
-// ******************************************************
-// Don't need for loops
-// create the variables in a global scope
-// Research Parseinit
-// ******************************************************
 
 // SUBMIT FUNCTION TO RUN THE TWO BELOW
 function submitClick(e){
@@ -148,6 +115,26 @@ function update() {
   for (var i = 0; i < chal1Update.length; i++) {
     chal1Update[i].innerText = chal1Input.value;
   }
+}
+
+// Functions to declare Winner
+function player1Win() {
+ if (guess1.value > numGenerated){
+ 	lowHigh1.innerText = "that's too high";
+ } else if (guess1.value < numGenerated){
+ 	lowHigh1.innerText = "that's too low";
+ } else {
+ 	lowHigh1.innerText = "Winner"
+ }
+}
+function player2Win(){
+ if (guess2.value > numGenerated){
+ 	lowHigh2.innerText = "that's too high";
+ } else if (guess2.value < numGenerated){
+ 	lowHigh2.innerText = "that's too low";
+ } else {
+ 	lowHigh2.innerText = "Winner";
+ }
 }
 
 // CLEAR GUESS INPUT
