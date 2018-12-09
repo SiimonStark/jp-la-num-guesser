@@ -154,6 +154,8 @@ function clearFields(e) {
   e.preventDefault();
   document.getElementById("js-clear-input1").value = "";
   document.getElementById("js-clear-input2").value = "";
+  largeGuess1.innerText = "#";
+  largeGuess2.innerText = "#";
 } 
 
 
