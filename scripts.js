@@ -86,6 +86,9 @@ function updateRng(e){
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
 }
 
+
+//RESET GAME ENABLED FUNC CALLED IN SUBMITCLICK
+
 //RESET GAME (CLEAR FIELDS AND GEN NEW NUMBER)
 function resetGame(e) {
   e.preventDefault();
@@ -154,7 +157,6 @@ function clearFields(e) {
 } 
 
 
-
 //ARE FIELDDS EMPTY? ONLY WORKS FOR FIRST GUESS FIELD.
 //IMPLEMENT FOR LOOP TO TARGET SECOND AS WELL?
 function areFieldsEmpty(e) {
@@ -162,7 +164,6 @@ function areFieldsEmpty(e) {
   clearButton.disabled = false;
 }
 
-//RESET GAME ENABLED FUNC CALLED IN SUBMITCLICK
 
 
 

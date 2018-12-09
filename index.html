@@ -19,13 +19,13 @@
             <div class="txt-field">
               <section class="min-input">
                 <label class="input-label" id="min-rng">Min Range</label>
-                <input class= "rng-input" id="js-min-input" type="number" name="min" min="0" max="99">
+                <input class= "rng-input" id="js-min-input" type="number" name="min">
               </section>
             </div>
             <div class="txt-field">
               <section class="max-input">
                 <label class="input-label" id="max-rng">Max Range</label>
-                <input class= "rng-input" id="js-max-input" type="number" name="max" min="1" max="100">
+                <input class= "rng-input" id="js-max-input" type="number" name="max">
               </section>
             </div>
             <button id="js-update">UPDATE</button>
@@ -88,15 +88,20 @@
       <aside class="right-col">
         <section class="tally">
           <article class="card-right">
-            <h4 class="js-updateChal1">Challenger 1 Name</h4> 
-            vs 
-            <h4 class="js-updateChal2">Challenger 2 Name</h4>
-            <hr>
-            <h2>WHO WILL WIN?</h2>
-            <h2>WINNER</h2>
-            <var>num-guesses</var>
-            <var>time</var>
-            <button type="reset" name="close">x</button>
+            <section class="chall-names">
+              <h4 class="js-updateChal1 right-names">CHALLENGER 1 NAME</h4>
+              <p>vs</p>
+              <h4 class="js-updateChal2 right-names">CHALLENGER 2 NAME</h4>
+            </section>
+            <section class="winner">
+              <h2 class="winner-name">CHALLENGER NAME</h2>
+              <h2 class="display-winner">WINNER</h2>
+            </section>
+            <section class="guesses-time">
+              <p>num-guesses</p>
+              <p>time</p>
+              <button class="close-btn" name="close">x</button>
+            </section>
           </article>
           <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
         </section>
