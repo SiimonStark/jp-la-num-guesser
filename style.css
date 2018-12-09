@@ -60,9 +60,10 @@ main {
 /*RANGE SECTION*/
 .rng {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
 }
+
 .min-input,
 .max-input {
   display: flex;
@@ -141,6 +142,11 @@ button {
   border: none;
 }
 
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 button:hover {
   background-color: #DD1972;
 }
@@ -194,14 +200,19 @@ button:disabled {
   padding: 2%;
 }
 
+/*//////////////////////////////////////////*/
 /*ERROR MESSAGE*/
-.error {
+.error-hidden {
+  display: none;
+}
+
+.error-shown {
   margin-top: 10px;
   font-size: 14px;
   color: #dd1972;
 }
 
-.error-box {
+.empty {
   border-color: #dd1972;
 }
 
@@ -211,16 +222,11 @@ img {
   margin-right: 3px;
 }
 
-/* Chal-1 VS Chal-2 */
+/*//////////////////////////////////////////*/
+/* LATEST SCORE SECTION */
 .card-reset {
   padding: 0;
   margin: 0;
-}
-
-#latest {
-  /*position: absolute;
-  display: flex;
-  align-items: flex-start;*/
 }
 
 .vs {
@@ -233,7 +239,6 @@ img {
 .current1 {
   width: 50%;
   border-right: 2px solid lightgray;
-  /*display: flex;*/
   padding: 5px;
   padding-top: 10px;
   text-align: center;
@@ -270,6 +275,8 @@ h5 {
   font-weight: 400;
 }
 
+
+/*//////////////////////////////////////////*/
 /*CARDS ON RIGHT*/
 .card-right {
   display: flex;
