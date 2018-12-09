@@ -14,8 +14,8 @@ var guess2 = document.querySelector(".js-guess-2");
 var largeGuess1 = document.getElementById("js-newguess-1");
 var largeGuess2 = document.getElementById("js-newguess-2");
 
-// SUBMIT BUTTON VARIABLE
-var getSubmit = document.querySelector("#js-submit");
+//ERROR MESSAGE VARIABLE
+var error = document.querySelector(".error-hidden");
 
 // RANDOM NUM VARIABLE
 var numGenerated
@@ -35,6 +35,7 @@ var maxUpdate = document.getElementById("js-max-update");
 var clearButton = document.querySelector("#js-clear");
 var getUpdate = document.querySelector("#js-update");
 var resetButton = document.querySelector("#js-reset");
+var getSubmit = document.querySelector("#js-submit");
 
 //DOM manipulation for lowHigh text
 var lowHigh1 = document.querySelector(".js-low-high1");
@@ -86,23 +87,6 @@ function updateRng(e){
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
 }
 
-
-//RESET GAME ENABLED FUNC CALLED IN SUBMITCLICK
-
-//RESET GAME (CLEAR FIELDS AND GEN NEW NUMBER)
-function resetGame(e) {
-  e.preventDefault();
-  document.getElementById("js-clear-input1").value = "";
-  document.getElementById("js-clear-input2").value = "";
-  document.getElementById("js-chal1").value = "";
-  document.getElementById("js-chal2").value = "";
-  minUpdate.innerText = minInput.value;
-  maxUpdate.innerText = maxInput.value;
-  min = parseInt(minInput.value) || 1;
-  max = parseInt(maxInput.value) || 100;
-  numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
-} 
-
 // SUBMIT BUTTON FUNCTION
 function submitClick(e){
   e.preventDefault();
@@ -111,6 +95,22 @@ function submitClick(e){
   validateGuess();
   player1Win();
   player2Win();
+  noInputGiven();
+  resetButton.disabled = false;
+}
+
+//ERROR MESSAGE IF FIELD IS BLANK
+function noInputGiven() {
+  console.log(error);
+  if (!chal1Input.value) {
+    chal1Input.classList.add("empty");
+    error.classList.remove("error-hidden");
+    error.classList.add("error-shown");
+  } else if(chal1Input.value) {
+    chal1Input.classList.remove("empty");
+    error.classList.remove("error-shown");
+    error.classList.add("error-hidden");
+  }
 }
 
 //UPDATE GUESSES IN CARDS
@@ -149,27 +149,49 @@ function player2Win(){
  }
 }
 
+//RESET LARGE GUESS
+function resetLargeNum() {
+  largeGuess1.innerText = "#";
+  largeGuess2.innerText = "#";
+}
+
+//CLEAR GUESS INPUT FIELDS
+function clearGuessInput() {
+  document.getElementById("js-clear-input1").value = "";
+  document.getElementById("js-clear-input2").value = "";
+}
+
+//CLEAR NAME INPUT FIELDS
+function clearNameInput() {
+  document.getElementById("js-chal1").value = "";
+  document.getElementById("js-chal2").value = "";
+}
+
 // CLEAR GUESS INPUT
 function clearFields(e) {
   e.preventDefault();
-  document.getElementById("js-clear-input1").value = "";
-  document.getElementById("js-clear-input2").value = "";
-  largeGuess1.innerText = "#";
-  largeGuess2.innerText = "#";
+  clearGuessInput();
+  resetLargeNum();
+} 
+
+//RESET GAME (CLEAR FIELDS AND GEN NEW NUMBER)
+function resetGame(e) {
+  e.preventDefault();
+  clearGuessInput();
+  clearNameInput();
+  minUpdate.innerText = minInput.value;
+  maxUpdate.innerText = maxInput.value;
+  min = parseInt(minInput.value) || 1;
+  max = parseInt(maxInput.value) || 100;
+  numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
+  resetLargeNum();
 } 
 
 
-//ARE FIELDDS EMPTY? ONLY WORKS FOR FIRST GUESS FIELD.
+//ARE FIELDS EMPTY? ONLY WORKS FOR FIRST GUESS FIELD.
 //IMPLEMENT FOR LOOP TO TARGET SECOND AS WELL?
 function areFieldsEmpty(e) {
   e.preventDefault();
   clearButton.disabled = false;
 }
-
-
-
-
-
-
-
 
