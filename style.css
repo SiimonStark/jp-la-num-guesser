@@ -142,6 +142,11 @@ button {
   border: none;
 }
 
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 button:hover {
   background-color: #DD1972;
 }

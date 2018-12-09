@@ -106,12 +106,25 @@ function noInputGiven() {
     chal1Input.classList.add("empty");
     error.classList.remove("error-hidden");
     error.classList.add("error-shown");
-  } else if(chal1Input.value) {
+  } else if (chal1Input.value) {
     chal1Input.classList.remove("empty");
     error.classList.remove("error-shown");
     error.classList.add("error-hidden");
   }
 }
+
+// function noInputGiven2() {
+//   console.log(error);
+//   if (!chal2Input.value) {
+//     chal2Input.classList.add("empty");
+//     error.classList.remove("error-hidden");
+//     error.classList.add("error-shown");
+//   } else if (chal2Input.value) {
+//     chal2Input.classList.remove("empty");
+//     error.classList.remove("error-shown");
+//     error.classList.add("error-hidden");
+//   }
+// }
 
 //UPDATE GUESSES IN CARDS
 function updateGuesses() {
