@@ -22,7 +22,7 @@ var numGenerated
 
 //UPDATE FIELDS VARIABLES
 // var min = parseInt(minInput.value);
-// Why does this break the code??
+// ???Why does this break the code????
 // var max = parseInt(maxInput.value);
 var minInput = document.querySelector("#js-min-input");
 var maxInput = document.querySelector("#js-max-input");
@@ -49,6 +49,14 @@ function validateRng(){
 	if (parseInt(minInput.value) > parseInt(maxInput.value)){
 			alert("Please choose a value lower than your Max!!");
 	} 
+}
+
+function validateGuess(){
+	if (parseInt(guess1.value) <= parseInt(minInput.value) || parseInt(guess1.value) >= parseInt(maxInput.value)){
+		alert("Please choose a value within the Range!!")
+	} else if (parseInt(guess2.value) <= parseInt(minInput.value) || parseInt(guess2.value) >= parseInt(maxInput.value)){
+		alert("Please choose a value within the Range!!")
+	}
 }
 //********************************************************
 
@@ -100,6 +108,7 @@ function submitClick(e){
   e.preventDefault();
   updateGuesses();
   update();
+  validateGuess();
   player1Win();
   player2Win();
 }
