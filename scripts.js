@@ -108,6 +108,9 @@ function noInputGiven() {
     error.classList.add("error-hidden");
   }
 }
+// FOR LOOP LOOKING FOR EMPTY FIELDS, IF EMPTY, RUN FUNCTION W/ ERROR
+document.querySelectorAll(".play-input")
+for
 
 //UPDATE GUESSES IN CARDS
 function updateGuesses() {

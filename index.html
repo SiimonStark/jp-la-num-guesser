@@ -41,25 +41,28 @@
             <div class="txt-field">
               <section class="name-input">
                 <label class="input-label name">Name</label>
-                <input id="js-chal1" type="text" name="name1" value="john">
+                <input class="play-input" id="js-chal1" type="text" name="name1" value="john">
                 <div class="js-error">
                   <p class="error-hidden"><img src="error-icon.svg">Enter a name</p>
                 </div>
               </section>
               <section class="guess-input">
                 <label class="input-label">Guess</label>
-                <input id="js-clear-input1" class="js-guess-1 input-field" name="guess1" type="number" required pattern="[0-9]">
+                <input id="js-clear-input1" class="js-guess-1 input-field play-input" name="guess1" type="number" required pattern="[0-9]">
               </section>
             </div>
             <h3 class="chall-head">Challenger 2</h3>
             <div class="txt-field">
               <section class="name-input">
                 <label class="input-label name">Name</label>
-                <input id="js-chal2" type="text" name="name">
+                <input class="play-input" id="js-chal2" type="text" name="name">
+                <div class="js-error">
+                  <p class="error-hidden"><img src="error-icon.svg">Enter a name</p>
+                </div>
               </section>
               <section class="guess-input">
                 <label id="js-guess-2" class="input-label">Guess</label>
-                <input id="js-clear-input2" class="js-guess-2 input-field" name="guess2" type="number" required pattern="[0-9]">
+                <input id="js-clear-input2" class="js-guess-2 input-field play-input" name="guess2" type="number" required pattern="[0-9]">
               </section>
             </div>
             <div class="button">
@@ -105,7 +108,6 @@
               <button class="close-btn" name="close">x</button>
             </section>
           </article>
-          <!-- Not sure how to have the cards repeat, but I think we only need the one card -->
         </section>
       </aside>
     </main>
