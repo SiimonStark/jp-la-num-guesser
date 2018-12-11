@@ -19,7 +19,7 @@ h1 {
   padding-top: 30px;
   margin-top: 0px;
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 4.5rem;
 }
 
 .h-num {
@@ -205,8 +205,24 @@ button:disabled {
 .error-hidden {
   display: none;
 }
+.error-hidden2 {
+  display: none;
+}
+
+.guess-error-hidden {
+  display: none;
+}
+.guess-error-hidden2 {
+  display: none;
+}
 
 .error-shown {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #dd1972;
+}
+
+.error-shown2 {
   margin-top: 10px;
   font-size: 14px;
   color: #dd1972;
