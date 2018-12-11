@@ -49,28 +49,6 @@ var lowHigh2 = document.querySelector(".js-low-high2");
 
 /////////////////////////////////////////////////////////////
 
-//********************************************************
-//Justin Working on: Form Validation
-//********************************************************
-function validateRng(){
-  if (parseInt(minInput.value) > parseInt(maxInput.value)){
-      alert("Please choose a value lower than your Max!!");
-  } else if (minInput.value === "" || maxInput.value === ""){
-		alert("PLEASE use only numbers!");
-	}
-}
-
-function validateGuess(){
-  if (parseInt(guess1.value) <= parseInt(minInput.value) || parseInt(guess1.value) >= parseInt(maxInput.value)){
-    alert("Please choose a value within the Range!!")
-  } else if (parseInt(guess2.value) <= parseInt(minInput.value) || parseInt(guess2.value) >= parseInt(maxInput.value)){
-    alert("Please choose a value within the Range!!")
-  } else if (guess1.value === "" || guess2.value === ""){
-        alert("Please input a guess (only numbers)!");
-    } 
-}
-//********************************************************
-
 //***************Event Listeners****************** 
 getSubmit.addEventListener('click', submitClick);
 
@@ -111,6 +89,28 @@ function submitClick(e){
   noInputGiven();
   resetButton.disabled = false;
 }
+
+//********************************************************
+//Justin Working on: Form Validation
+//********************************************************
+function validateRng(){
+  if (parseInt(minInput.value) > parseInt(maxInput.value)){
+      alert("Please choose a value lower than your Max!!");
+  } else if (minInput.value === "" || maxInput.value === ""){
+    alert("PLEASE use only numbers!");
+  }
+}
+
+function validateGuess(){
+  if (parseInt(guess1.value) < parseInt(minInput.value) || parseInt(guess1.value) > parseInt(maxInput.value)){
+    alert("Please choose a value within the Range!!")
+  } else if (parseInt(guess2.value) < parseInt(minInput.value) || parseInt(guess2.value) > parseInt(maxInput.value)){
+    alert("Please choose a value within the Range!!")
+  } else if (guess1.value === "" || guess2.value === ""){
+        alert("Please input a guess (only numbers)!");
+    } 
+}
+//********************************************************
 
 // ERROR MESSAGE IF FIELD IS BLANK
 function noInputGiven() {
