@@ -44,6 +44,9 @@ var getSubmit = document.querySelector("#js-submit");
 var lowHigh1 = document.querySelector(".js-low-high1");
 var lowHigh2 = document.querySelector(".js-low-high2");
 
+// WINNER NAME VARIABLE
+// var winnerName = document.querySelector(".js-winner-name");
+
 /////////////////////////////////////////////////////////////
 
 //********************************************************
@@ -52,7 +55,9 @@ var lowHigh2 = document.querySelector(".js-low-high2");
 function validateRng(){
   if (parseInt(minInput.value) > parseInt(maxInput.value)){
       alert("Please choose a value lower than your Max!!");
-  } 
+  } else if (minInput.value === "" || maxInput.value === ""){
+		alert("PLEASE use only numbers!");
+	}
 }
 
 function validateGuess(){
@@ -100,6 +105,7 @@ function submitClick(e){
   validateGuess();
   player1Win();
   player2Win();
+  declareWinner();
   // displayError();
   noInputGiven2();
   noInputGiven();
@@ -150,24 +156,37 @@ function update() {
 }
 
 // Functions to declare Winner
-function player1Win() {
- if (guess1.value > numGenerated){
-  lowHigh1.innerText = "that's too high";
- } else if (guess1.value < numGenerated){
-  lowHigh1.innerText = "that's too low";
- } else {
-  lowHigh1.innerText = "Winner"
- }
+function declareWinner(){
+
+	var winnerName = document.getElementById("js-winner-name");
+// Keep in mind: Will ID messup when we have multiple cards???
+	if(guess1.value == numGenerated && guess2.value == numGenerated){
+		winnerName.innerText = "FIGHT to the DEATH!";
+	} else if (guess1.value == numGenerated){
+		winnerName.innerText = chal1Input.value;
+	} else if (guess2.value == numGenerated){
+		winnerName.innerText = chal2Input.value;
+	}
 }
-function player2Win(){
- if (guess2.value > numGenerated){
-  lowHigh2.innerText = "that's too high";
- } else if (guess2.value < numGenerated){
-  lowHigh2.innerText = "that's too low";
- } else {
-  lowHigh2.innerText = "Winner";
- }
-}
+	function player1Win() {
+	 if (guess1.value > numGenerated){
+	  lowHigh1.innerText = "that's too high";
+	 } else if (guess1.value < numGenerated){
+	  lowHigh1.innerText = "that's too low";
+	 } else {
+	  lowHigh1.innerText = "Winner"
+	 }
+	}
+	function player2Win(){
+	 if (guess2.value > numGenerated){
+	  lowHigh2.innerText = "that's too high";
+	 } else if (guess2.value < numGenerated){
+	  lowHigh2.innerText = "that's too low";
+	 } else {
+	  lowHigh2.innerText = "Winner";
+	 }
+	}
+// }
 
 //RESET LARGE GUESS
 function resetLargeNum() {
