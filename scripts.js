@@ -17,6 +17,9 @@ var largeGuess2 = document.getElementById("js-newguess-2");
 //ERROR MESSAGE VARIABLE
 var error = document.querySelector(".error-hidden");
 
+var error2 = document.querySelector(".error-hidden2");
+
+var guessError = document.querySelector(".guess-error-hidden")
 // RANDOM NUM VARIABLE
 var numGenerated
 
@@ -63,7 +66,7 @@ function validateGuess(){
   } else if (parseInt(guess2.value) <= parseInt(minInput.value) || parseInt(guess2.value) >= parseInt(maxInput.value)){
     alert("Please choose a value within the Range!!")
   } else if (guess1.value === "" || guess2.value === ""){
-        alert("PLEASE use only numbers!");
+        alert("Please input a guess (only numbers)!");
     } 
 }
 //********************************************************
@@ -103,11 +106,13 @@ function submitClick(e){
   player1Win();
   player2Win();
   declareWinner();
+  // displayError();
+  noInputGiven2();
   noInputGiven();
   resetButton.disabled = false;
 }
 
-//ERROR MESSAGE IF FIELD IS BLANK
+// ERROR MESSAGE IF FIELD IS BLANK
 function noInputGiven() {
   console.log(error);
   if (!chal1Input.value) {
@@ -121,18 +126,18 @@ function noInputGiven() {
   }
 }
 
-// function noInputGiven2() {
-//   console.log(error);
-//   if (!chal2Input.value) {
-//     chal2Input.classList.add("empty");
-//     error.classList.remove("error-hidden");
-//     error.classList.add("error-shown");
-//   } else if (chal2Input.value) {
-//     chal2Input.classList.remove("empty");
-//     error.classList.remove("error-shown");
-//     error.classList.add("error-hidden");
-//   }
-// }
+function noInputGiven2() {
+  console.log(error2);
+  if (!chal2Input.value) {
+    chal2Input.classList.add("empty");
+    error2.classList.remove("error-hidden2");
+    error2.classList.add("error-shown2");
+  } else if (chal2Input.value) {
+    chal2Input.classList.remove("empty");
+    error2.classList.remove("error-shown2");
+    error2.classList.add("error-hidden2");
+  }
+}
 
 //UPDATE GUESSES IN CARDS
 function updateGuesses() {
