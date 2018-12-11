@@ -58,16 +58,10 @@ main {
 }
 
 /*RANGE SECTION*/
-.rng {
+.txt-field {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
-
-.min-input,
-.max-input {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .rng-head {
@@ -76,43 +70,42 @@ main {
 
 .rng-form {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 10px;
 }
 
-.txt-field {
+.range-inputs {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+}
+
+.min-input {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.max-input {
+  display: flex;
+  flex-direction: column;
 }
 
 .name-input {
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 .guess-input {
   display: flex;
   flex-direction: column;
-}
-.name {
-  width: 290px;
+  width: 30%;
 }
 
 input {
   padding: 8px;
 }
-
-#min-rng,
-#max-rng {
-  width: 130px;
-}
-
-#update {
-  display: flex;
-}
-
 
 .vs {
   display: flex;
@@ -121,8 +114,7 @@ input {
 
 .chall-head {
   margin-bottom: 4px;
-/*  margin-left: 5px;
-*/  margin-top: 5px;
+  margin-top: 5px;
 }
 
 .chal-form {
@@ -166,7 +158,6 @@ button:disabled {
 /*PLAY INPUT SECTION*/
 .play-input {
   border: 1px solid #d0d2d3;
-  width: 90%;
 }
 
 /*score section*/
@@ -352,8 +343,3 @@ h5 {
   padding: 0;
   font-weight: 300;
 }
-
-
-
-
-

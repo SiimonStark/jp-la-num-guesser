@@ -198,6 +198,8 @@ function resetLargeNum() {
 function clearGuessInput() {
   document.getElementById("js-clear-input1").value = "";
   document.getElementById("js-clear-input2").value = "";
+  clearButton.disabled = true;
+  resetButton.disabled = true;
 }
 
 //CLEAR NAME INPUT FIELDS
@@ -224,6 +226,7 @@ function resetGame(e) {
   max = parseInt(maxInput.value) || 100;
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
   resetLargeNum();
+  clearButton.disabled = true;
 } 
 
 

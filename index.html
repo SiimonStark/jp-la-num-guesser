@@ -17,17 +17,16 @@
   <main>
     <aside class="left-col">
       <section class="card-left">
-        <!-- <section class="rng"> -->
           <h3 class="rng-head">Set Range</h3>
           <form class="rng-form">
             <div class="txt-field">
-              <section class="min-input">
+              <section class="min-input range-inputs">
                 <label class="input-label" id="min-rng">Min Range</label>
                 <input class= "rng-input" id="js-min-input" type="number" name="min">
               </section>
             </div>
             <div class="txt-field">
-              <section class="max-input">
+              <section class="max-input range-inputs">
                 <label class="input-label" id="max-rng">Max Range</label>
                 <input class= "rng-input" id="js-max-input" type="number" name="max">
               </section>
@@ -40,12 +39,13 @@
             <p>The Current Range is 
               <span id="js-min-update">min</span>
                to 
-              <span id="js-max-update">max</span></p>
+              <span id="js-max-update">max</span>
+            </p>
             <h3 class="chall-head">Challenger 1</h3>
             <div class="txt-field">
               <section class="name-input">
                 <label class="input-label name">Name</label>
-                <input class="play-input" id="js-chal1" type="text" name="name1" value="john">
+                <input class="play-input name1-input" id="js-chal1" type="text" name="name1">
                 <div class="js-error">
                   <p class="error-hidden"><img src="error-icon.svg">Enter a name</p>
                 </div>
