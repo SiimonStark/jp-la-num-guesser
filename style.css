@@ -67,8 +67,10 @@ main {
 .right-col {
   background-color: #D1D2D4;
   width: 50%;
-  /*display: flex;
-  justify-content: center;*/
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 }
 
 /*RANGE SECTION*/
@@ -193,10 +195,10 @@ button:disabled {
 /*  justify-content: center;
 */}
 
-.tally {
+/*.tally {
   display: flex;
   flex-direction: column;
-}
+}*/
 
 .card-left {
   background-color: #ffffff;
@@ -216,6 +218,7 @@ button:disabled {
   border: 2px solid #a8a6a6;
   margin: 5%;
   padding: 2%;
+  height: 220px;
 }
 
 /*//////////////////////////////////////////*/
@@ -344,6 +347,7 @@ h5 {
   flex-direction: column;
   align-items: center;
   border-bottom: 2px solid #d0d2d3;
+  text-transform: uppercase;
 }
 
 .winner-name {
@@ -388,6 +392,10 @@ h5 {
 
   h1 {
   font-size: 200%;
+  }
+
+  .ultimate {
+    font-size: 85%;
   }
 
   .h-num {
