@@ -19,7 +19,7 @@ h1 {
   padding-top: 30px;
   margin-top: 0px;
   margin-bottom: 0;
-  font-size: 4.5rem;
+  font-size: 400%;
 }
 
 .h-num {
@@ -39,8 +39,6 @@ h4 {
 /*Main Parent Container*/
 main {
   display: flex;
-  /*flex-wrap: wrap;*/
-  /*@media query*/
 }
 
 /*LEFT COLUMN*/
@@ -121,6 +119,16 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+#js-min-update {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+#js-max-update {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 button {
@@ -293,6 +301,7 @@ h5 {
 .right-names {
   color: black;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .chall-names {
@@ -342,4 +351,72 @@ h5 {
   width: 22px;
   padding: 0;
   font-weight: 300;
+}
+
+
+/*//////////////////////////////////////////*/
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+@media screen and (max-width: 450px){
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .left-col {
+    width: 100%
+  }
+  .right-col {
+    width: 100%
+  }
+
+  .h-num {
+    display: block;
+    margin-bottom: -10px;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vs {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .current1 {
+    width: 100%;
+    border-right: none;
+  }
+
+  .current2 {
+    width: 100%;
+    border-top: 2px solid lightgray;
+  }
+
+  .mobile-chal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-input,
+  .guess-input {
+    width: 100%;
+  }
+
+  .chall-names {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-names {
+    padding: 2px;
+  }
+
+  .chall-names p {
+    margin: 0;
+  }
 }
