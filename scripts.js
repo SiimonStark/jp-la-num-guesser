@@ -166,25 +166,50 @@ function declareWinner(){
 		winnerName.innerText = chal2Input.value;
 	}
 }
-	function player1Win() {
-	 if (guess1.value > numGenerated){
-	  lowHigh1.innerText = "that's too high";
-	 } else if (guess1.value < numGenerated){
-	  lowHigh1.innerText = "that's too low";
-	 } else {
-	  lowHigh1.innerText = "Winner"
-	 }
-	}
-	function player2Win(){
-	 if (guess2.value > numGenerated){
-	  lowHigh2.innerText = "that's too high";
-	 } else if (guess2.value < numGenerated){
-	  lowHigh2.innerText = "that's too low";
-	 } else {
-	  lowHigh2.innerText = "Winner";
-	 }
-	}
-// }
+
+function player1Win() {
+ if (guess1.value > numGenerated){
+  lowHigh1.innerText = "that's too high";
+ } else if (guess1.value < numGenerated){
+  lowHigh1.innerText = "that's too low";
+ } else {
+  lowHigh1.innerText = "Winner"
+  createCard();
+ }
+}
+
+function player2Win(){
+ if (guess2.value > numGenerated){
+  lowHigh2.innerText = "that's too high";
+ } else if (guess2.value < numGenerated){
+  lowHigh2.innerText = "that's too low";
+ } else {
+  lowHigh2.innerText = "Winner";
+  createCard();
+ }
+}
+
+function createCard(chal1Input, chal2Input, winnerName) {
+  var rightSide = document.querySelector(".right-col");
+  var newCard = 
+  `<article class="card-right">
+      <section class="chall-names">
+        <h4 class="js-updateChal1 right-names">${chal1Input}</h4>
+        <p>vs</p>
+        <h4 class="js-updateChal2 right-names">${chal2Input}</h4>
+      </section>
+      <section class="winner">
+        <h2 id="js-winner-name">${winnerName}</h2>
+        <h2 class="display-winner">WINNER</h2>
+      </section>
+      <section class="guesses-time">
+        <p>num-guesses</p>
+        <p>time</p>
+        <button class="close-btn" name="close">X</button>
+      </section>
+    </article>`
+  rightSide.innerHTML = newCard + rightSide.innerHTML;
+}
 
 //RESET LARGE GUESS
 function resetDom() {
@@ -234,3 +259,6 @@ function areFieldsEmpty(e) {
   e.preventDefault();
   clearButton.disabled = false;
 }
+
+
+
