@@ -4,7 +4,7 @@
   <title>Number Guesser</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-  <!-- <meta http-equiv="refresh" content="3" /> -->
+  <meta name="viewport" content= "width= device-width, initial-scale=1">
 </head>
 <body>
   <header>
@@ -45,7 +45,7 @@
               <span id="js-max-update">max</span>
             </p>
             <h3 class="chall-head">Challenger 1</h3>
-            <div class="txt-field">
+            <div class="txt-field mobile-chal">
               <section class="name-input">
                 <label class="input-label name">Name</label>
                 <input class="play-input name1-input" id="js-chal1" type="text" name="name1">
@@ -59,7 +59,7 @@
               </section>
             </div>
             <h3 class="chall-head">Challenger 2</h3>
-            <div class="txt-field">
+            <div class="txt-field mobile-chal">
               <section class="name-input">
                 <label class="input-label name">Name</label>
                 <input class="play-input" id="js-chal2" type="text" name="name">
@@ -73,9 +73,9 @@
               </section>
             </div>
             <div class="button">
-              <button id="js-submit">SUBMIT GUESS</button>
-              <button id="js-reset" disabled="true">RESET GAME</button>
-              <button id="js-clear" disabled="true">CLEAR GAME</button>
+              <button class="button-stack" id="js-submit">SUBMIT GUESS</button>
+              <button class="button-stack" id="js-reset" disabled="true">RESET GAME</button>
+              <button class="button-stack" id="js-clear" disabled="true">CLEAR GAME</button>
             </div>
           </form>
         </section>
