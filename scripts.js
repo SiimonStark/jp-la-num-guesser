@@ -114,7 +114,6 @@ function validateGuess(){
 
 // ERROR MESSAGE IF FIELD IS BLANK
 function noInputGiven() {
-  console.log(error);
   if (!chal1Input.value) {
     chal1Input.classList.add("empty");
     error.classList.remove("error-hidden");
@@ -127,7 +126,6 @@ function noInputGiven() {
 }
 
 function noInputGiven2() {
-  console.log(error2);
   if (!chal2Input.value) {
     chal2Input.classList.add("empty");
     error2.classList.remove("error-hidden2");
@@ -189,7 +187,7 @@ function declareWinner(){
 // }
 
 //RESET LARGE GUESS
-function resetLargeNum() {
+function resetDom() {
   largeGuess1.innerText = "#";
   largeGuess2.innerText = "#";
 }
@@ -225,7 +223,7 @@ function resetGame(e) {
   min = parseInt(minInput.value) || 1;
   max = parseInt(maxInput.value) || 100;
   numGenerated = Math.floor(Math.random() * (max - min + 1))  + min;
-  resetLargeNum();
+  resetDom();
   clearButton.disabled = true;
 } 
 
