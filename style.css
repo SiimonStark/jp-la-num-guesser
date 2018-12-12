@@ -9,7 +9,12 @@ body {
 /*HEADER STYLING*/
 header {
   background-color: #404041;
+  width: 100%;
 }
+
+/*.hr{
+  width: 15%;
+}*/
 
 /*H1 STYLING*/
 h1 {
@@ -27,6 +32,10 @@ h1 {
 }
 
 /*SUB HEADER*/
+.sub-head {
+  display: flex;
+  justify-content: center;
+}
 h4 {
   text-align: center;
   margin-top: 0px;
@@ -76,12 +85,13 @@ main {
 .range-inputs {
   display: flex;
   justify-content: space-between;
+  width: 33%;
 }
 
 .min-input {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  /*width: 60%;*/
 }
 
 .max-input {
@@ -186,10 +196,12 @@ button:disabled {
   border: 2px solid #d0d2d3;
   margin: 3%;
   padding: 2%;
+
 }
 
 .card-left p {
   margin-top: 0;
+
 }
 
 .card-right {
@@ -363,7 +375,11 @@ h5 {
     display: flex;
     flex-wrap: wrap;
   }
-
+  
+  .rng-form {
+    flex-direction: row;
+    align-items: center;
+  }
   .left-col {
     width: 100%
   }
