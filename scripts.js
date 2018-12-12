@@ -60,6 +60,8 @@ resetButton.addEventListener('click', resetGame);
 
 guess1.addEventListener('keyup', areFieldsEmpty);
 
+guess2.addEventListener('keyup', areFieldsEmpty);
+
 //////////////////////////////////////////////////////////
 
 //***************FUNCTIONS************************
@@ -84,15 +86,12 @@ function submitClick(e){
   player1Win();
   player2Win();
   declareWinner();
-  // displayError();
   noInputGiven2();
   noInputGiven();
   resetButton.disabled = false;
 }
 
-//********************************************************
-//Justin Working on: Form Validation
-//********************************************************
+//VALIDATE RANGE VALUES
 function validateRng(){
   if (parseInt(minInput.value) > parseInt(maxInput.value)){
       alert("Please choose a value lower than your Max!!");
@@ -101,6 +100,7 @@ function validateRng(){
   }
 }
 
+//VALIDATE GUESS VALUES
 function validateGuess(){
   if (parseInt(guess1.value) < parseInt(minInput.value) || parseInt(guess1.value) > parseInt(maxInput.value)){
     alert("Please choose a value within the Range!!")
@@ -110,7 +110,6 @@ function validateGuess(){
         alert("Please input a guess (only numbers)!");
     } 
 }
-//********************************************************
 
 // ERROR MESSAGE IF FIELD IS BLANK
 function noInputGiven() {
@@ -153,11 +152,10 @@ function update() {
   }
 }
 
+
 // Functions to declare Winner
 function declareWinner(){
-
 	var winnerName = document.getElementById("js-winner-name");
-// Keep in mind: Will ID messup when we have multiple cards???
 	if(guess1.value == numGenerated && guess2.value == numGenerated){
 		winnerName.innerText = "FIGHT to the DEATH!";
 	} else if (guess1.value == numGenerated){
@@ -189,17 +187,19 @@ function player2Win(){
  }
 }
 
-function createCard(chal1Input, chal2Input, winnerName) {
+function createCard(name1, name2, winner) {
+  var name1 = chal1Input.value;
+  var name2 = chal2Input.value;
   var rightSide = document.querySelector(".right-col");
   var newCard = 
   `<article class="card-right">
       <section class="chall-names">
-        <h4 class="js-updateChal1 right-names">${chal1Input}</h4>
+        <h4 class="js-updateChal1 right-names">${name1}</h4>
         <p>vs</p>
-        <h4 class="js-updateChal2 right-names">${chal2Input}</h4>
+        <h4 class="js-updateChal2 right-names">${name2}</h4>
       </section>
       <section class="winner">
-        <h2 id="js-winner-name">${winnerName}</h2>
+        <h2 id="js-winner-name">${winner}</h2>
         <h2 class="display-winner">WINNER</h2>
       </section>
       <section class="guesses-time">
@@ -252,9 +252,7 @@ function resetGame(e) {
   clearButton.disabled = true;
 } 
 
-
-//ARE FIELDS EMPTY? ONLY WORKS FOR FIRST GUESS FIELD.
-//IMPLEMENT FOR LOOP TO TARGET SECOND AS WELL?
+//Clear Input Fields
 function areFieldsEmpty(e) {
   e.preventDefault();
   clearButton.disabled = false;
