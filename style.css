@@ -213,7 +213,7 @@ button:disabled {
 
 .card-right {
   background-color: #ffffff;
-  border: 2px solid #6e6e6e;
+  border: 2px solid #a8a6a6;
   margin: 5%;
   padding: 2%;
 }
@@ -382,31 +382,47 @@ h5 {
     display: flex;
     flex-wrap: wrap;
   }
-  
-  .rng-form {
-    flex-direction: row;
-    align-items: center;
-  }
   .left-col {
-    width: 100%
+  border-right: none;
   }
-  .right-col {
-    width: 100%
+
+  h1 {
+  font-size: 200%;
   }
 
   .h-num {
-    display: block;
     margin-bottom: -10px;
   }
 
-  .button {
-    display: flex;
+  .rng-form {
     flex-direction: column;
+    align-items: center;
+    padding-bottom: 2px;
   }
 
-  .vs {
-  display: flex;
-  flex-direction: column;
+  .range-inputs input {
+    border: 1px solid lightgray;
+  }
+
+  #js-update {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .left-col,
+  .right-col,
+  .range-inputs,
+  .name-input,
+  .guess-input {
+    width: 100%
+  }
+
+  .button,
+  .vs,
+  .mobile-chal {
+    display: flex;
+    flex-direction: column;
   }
 
   .current1 {
@@ -417,16 +433,6 @@ h5 {
   .current2 {
     width: 100%;
     border-top: 2px solid lightgray;
-  }
-
-  .mobile-chal {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .name-input,
-  .guess-input {
-    width: 100%;
   }
 
   .chall-names {
