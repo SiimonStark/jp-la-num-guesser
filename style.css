@@ -192,20 +192,14 @@ button:disabled {
   display: flex;
   border: 1px solid #d0d2d3;
   width: 90%;
-/*  justify-content: center;
-*/}
+}
 
-/*.tally {
-  display: flex;
-  flex-direction: column;
-}*/
 
 .card-left {
   background-color: #ffffff;
   border: 2px solid #d0d2d3;
   margin: 3%;
   padding: 2%;
-
 }
 
 .card-left p {
@@ -381,17 +375,13 @@ h5 {
 /*MEDIA QUERIES*/
 
 /*MOBILE*/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px), (max-width: 800px){
   main {
     display: flex;
     flex-wrap: wrap;
   }
   .left-col {
   border-right: none;
-  }
-
-  h1 {
-  font-size: 200%;
   }
 
   .ultimate {
@@ -435,7 +425,7 @@ h5 {
 
   .current1 {
     width: 100%;
-    border-right: none;
+    border-right: 0;
   }
 
   .current2 {
@@ -455,5 +445,38 @@ h5 {
 
   .chall-names p {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 350%;
+  }
+  .vs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .current2 {
+    border-top: 0;
+    border-left: 2px solid lightgray;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 200%;
+  }
+
+  .vs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .current2 {
+    border-top: 2px solid lightgray;
+    border-left: 0;
   }
 }

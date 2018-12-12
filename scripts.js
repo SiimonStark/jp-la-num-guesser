@@ -187,6 +187,16 @@ function player2Win(){
  }
 }
 
+var rightSide = document.querySelector(".right-col")
+rightSide.addEventListener('click', deleteCard)
+
+function deleteCard() {
+  if(event.target.className === "close-btn"){
+    event.target.parentElement.parentElement.remove();
+  }
+}
+
+
 function createCard(name1, name2, winner) {
   var name1 = chal1Input.value;
   var name2 = chal2Input.value;
