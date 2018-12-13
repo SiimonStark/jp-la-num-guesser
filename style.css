@@ -1,7 +1,8 @@
+/*BODY STYLING*/
 body {
+  color: #404041;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  color: #404041;
   margin: 0;
   padding: 0;
 }
@@ -14,13 +15,13 @@ header {
 
 /*H1 STYLING*/
 h1 {
-  text-align: center;
-  font-weight: 300;
   color: #dd1972;
-  padding-top: 30px;
-  margin-top: 0px;
-  margin-bottom: 0;
   font-size: 400%;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 0px;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .h-num {
@@ -37,19 +38,19 @@ h1 {
 .lines {
   border-top: 1px solid white;
   display: inline-block;
-  width: 10%;
   margin-top: 10px;
+  width: 10%;
 }
 
 h4 {
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 20px;
   color: #ffffff;
   font-weight: 300;
-  margin-right: 10px;
+  margin-bottom: 0px;
   margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 /*Main Parent Container*/
@@ -59,18 +60,18 @@ main {
 
 /*LEFT COLUMN*/
 .left-col {
- width: 50%;
  background-color: #f7f7f7;
  border-right: 2px solid black;
+ width: 50%;
 }
 
 .right-col {
-  background-color: #D1D2D4;
-  width: 50%;
-  height: 780px;
   display: flex;
   flex-direction: column;
+  height: 780px;
   overflow-y: scroll;
+  width: 50%;
+  background-color: #D1D2D4;
 }
 
 /*RANGE SECTION*/
@@ -82,12 +83,13 @@ main {
 
 .rng-head {
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .rng-form {
+  align-items: flex-end;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   padding-bottom: 10px;
 }
 
@@ -97,17 +99,14 @@ main {
   width: 33%;
 }
 
-.min-input {
-  display: flex;
-  flex-direction: column;
-  /*width: 60%;*/
-}
-
+.min-input,
 .max-input {
   display: flex;
   flex-direction: column;
 }
 
+
+/*GAME INPUT SECTION*/
 .name-input {
   display: flex;
   flex-direction: column;
@@ -124,6 +123,7 @@ input {
   padding: 8px;
 }
 
+/*LATEST SCORE SECTION*/
 .vs {
   display: flex;
   justify-content: space-between;
@@ -140,25 +140,21 @@ input {
   justify-content: space-around;
 }
 
-#js-min-update {
-  font-weight: 700;
-  text-decoration: underline;
-}
-
+#js-min-update,
 #js-max-update {
   font-weight: 700;
   text-decoration: underline;
 }
 
 button {
+  background-color: gray;
+  border-radius: 32px;
+  border: none;
+  color: white;
   font-size: .95rem;
   font-weight: bold;
-  background-color: gray;
-  color: white;
-  border-radius: 32px;
-  padding: 6px 20px;
   margin: 4px;
-  border: none;
+  padding: 6px 20px;
 }
 
 .button {
@@ -166,6 +162,7 @@ button {
   flex-direction: row;
   justify-content: space-around;
 }
+
 button:hover {
   background-color: #DD1972;
 }
@@ -178,10 +175,6 @@ button:disabled {
   margin-bottom: 15px;
 }
 
-.rng-head {
-  margin-bottom: 15px;
-}
-
 /*PLAY INPUT SECTION*/
 .play-input {
   border: 1px solid #d0d2d3;
@@ -189,11 +182,10 @@ button:disabled {
 
 /*score section*/
 .score {
-  display: flex;
   border: 1px solid #d0d2d3;
+  display: flex;
   width: 90%;
 }
-
 
 .card-left {
   background-color: #ffffff;
@@ -204,43 +196,27 @@ button:disabled {
 
 .card-left p {
   margin-top: 0;
-
 }
 
 .card-right {
   background-color: #ffffff;
   border: 2px solid #a8a6a6;
   margin: 5%;
-  padding: 2%;
   min-height: 220px;
+  padding: 2%;
 }
 
-/*//////////////////////////////////////////*/
 /*ERROR MESSAGE*/
-.error-hidden {
-  display: none;
-}
+.error-hidden,
 .error-hidden2 {
   display: none;
 }
 
-.guess-error-hidden {
-  display: none;
-}
-.guess-error-hidden2 {
-  display: none;
-}
-
-.error-shown {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #dd1972;
-}
-
+.error-shown,
 .error-shown2 {
-  margin-top: 10px;
-  font-size: 14px;
   color: #dd1972;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .empty {
@@ -248,38 +224,36 @@ button:disabled {
 }
 
 img {
-  width: 15px;
-  margin-top: 7px;
   margin-right: 3px;
+  margin-top: 7px;
+  width: 15px;
 }
 
-/*//////////////////////////////////////////*/
 /* LATEST SCORE SECTION */
 .card-reset {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .vs {
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  /*margin-top: 5px;*/
 }
 
 .current1 {
-  width: 50%;
   border-right: 2px solid lightgray;
-  padding: 5px;
   padding-top: 10px;
+  padding: 5px;
   text-align: center;
+  width: 50%;
 }
 
 .current2 {
-  width: 50%;
-  padding: 5px;
   padding-top: 10px;
+  padding: 5px;
   text-align: center;
+  width: 50%;
 }
 
 .chal {
@@ -296,8 +270,8 @@ h5 {
 
 .js-big-num {
   color: #f74d98;
-  font-weight: 700;
   font-size: 60px;
+  font-weight: 700;
   margin-bottom: 0px;
 }
 
@@ -321,10 +295,10 @@ h5 {
 }
 
 .chall-names {
+  border-bottom: 2px solid #d0d2d3;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border-bottom: 2px solid #d0d2d3;
 }
 
 .chall-names h4 {
@@ -332,15 +306,15 @@ h5 {
 }
 
 .chall-names p {
-  margin-top: 0px;
   color: #404041;
+  margin-top: 0px;
 }
 
 .winner {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   border-bottom: 2px solid #d0d2d3;
+  display: flex;
+  flex-direction: column;
   text-transform: uppercase;
 }
 
@@ -349,27 +323,26 @@ h5 {
 }
 
 .display-winner {
-  margin-top: 2px;
   font-weight: 300;
+  margin-top: 2px;
 }
 
 .guesses-time {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .close-btn {
   border-radius: 50%;
   color:#ffffff;
   font-size: 16px;
-  height: 22px;
-  width: 22px;
-  padding: 0;
   font-weight: 700;
+  height: 22px;
+  padding: 0;
+  width: 22px;
 }
-
 
 /*//////////////////////////////////////////*/
 /*MEDIA QUERIES*/
@@ -381,7 +354,7 @@ h5 {
     flex-wrap: wrap;
   }
   .left-col {
-  border-right: none;
+    border-right: none;
   }
 
   .ultimate {
@@ -424,13 +397,13 @@ h5 {
   }
 
   .current1 {
-    width: 100%;
     border-right: 0;
+    width: 100%;
   }
 
   .current2 {
-    width: 100%;
     border-top: 2px solid lightgray;
+    width: 100%;
   }
 
   .chall-names {
@@ -458,8 +431,8 @@ h5 {
   }
 
   .current2 {
-    border-top: 0;
     border-left: 2px solid lightgray;
+    border-top: 0;
   }
 }
 
@@ -476,7 +449,7 @@ h5 {
   }
 
   .current2 {
-    border-top: 2px solid lightgray;
     border-left: 0;
+    border-top: 2px solid lightgray;
   }
 }
