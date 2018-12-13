@@ -53,4 +53,4 @@ Big thank you Liz Asbell! You were a wonderful partner and I learned a tremendou
 
 Also thank you to everyone who donated their time and patience to our success. Turing truly is a great environment to start this journey into our tech careers! The ecosystem of other developers all struggling and learning together builds such a strong emphasis on helping others and yourself to achieve success!!!
 
-© [Justin Pyktel](https://github.com/SiimonStark) & [Liz Asbell] (https://github.com/easbell)
+© [Justin Pyktel](https://github.com/SiimonStark) & [Liz Asbell](https://github.com/easbell)
