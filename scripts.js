@@ -88,6 +88,7 @@ function submitClick(e){
   noInputGiven2();
   noInputGiven();
   resetButton.disabled = false;
+
 }
 
 //********************************************************
@@ -95,7 +96,7 @@ function submitClick(e){
 //********************************************************
 function validateRng(){
   if (parseInt(minInput.value) > parseInt(maxInput.value)){
-      alert("Please choose a value lower than your Max!!");
+    alert("Please choose a value lower than your Max!!");
   } else if (minInput.value === "" || maxInput.value === ""){
     alert("PLEASE use only numbers!");
   }
@@ -107,8 +108,8 @@ function validateGuess(){
   } else if (parseInt(guess2.value) < parseInt(minInput.value) || parseInt(guess2.value) > parseInt(maxInput.value)){
     alert("Please choose a value within the Range!!")
   } else if (guess1.value === "" || guess2.value === ""){
-        alert("Please input a guess (only numbers)!");
-    } 
+    alert("Please input a guess (only numbers)!");
+  } 
 }
 //********************************************************
 
@@ -155,59 +156,60 @@ function update() {
 
 // Functions to declare Winner
 function declareWinner(){
-
 	var winnerName = document.getElementById("js-winner-name");
 // Keep in mind: Will ID messup when we have multiple cards???
-	if(guess1.value == numGenerated && guess2.value == numGenerated){
-		winnerName.innerText = "FIGHT to the DEATH!";
-	} else if (guess1.value == numGenerated){
-		winnerName.innerText = chal1Input.value;
-	} else if (guess2.value == numGenerated){
-		winnerName.innerText = chal2Input.value;
-	}
+if(guess1.value == numGenerated && guess2.value == numGenerated){
+  winnerName.innerText = "FIGHT to the DEATH!";
+} else if (guess1.value == numGenerated){
+  winnerName.innerText = chal1Input.value;
+} else if (guess2.value == numGenerated){
+  winnerName.innerText = chal2Input.value;
+}
 }
 
 function player1Win() {
  if (guess1.value > numGenerated){
   lowHigh1.innerText = "that's too high";
- } else if (guess1.value < numGenerated){
+} else if (guess1.value < numGenerated){
   lowHigh1.innerText = "that's too low";
- } else {
+} else {
   lowHigh1.innerText = "Winner"
   createCard();
- }
+  // incRng();
+}
 }
 
 function player2Win(){
  if (guess2.value > numGenerated){
   lowHigh2.innerText = "that's too high";
- } else if (guess2.value < numGenerated){
+} else if (guess2.value < numGenerated){
   lowHigh2.innerText = "that's too low";
- } else {
+} else {
   lowHigh2.innerText = "Winner";
   createCard();
- }
+  // incRng();
+}
 }
 
 function createCard(chal1Input, chal2Input, winnerName) {
   var rightSide = document.querySelector(".right-col");
   var newCard = 
   `<article class="card-right">
-      <section class="chall-names">
-        <h4 class="js-updateChal1 right-names">${chal1Input}</h4>
-        <p>vs</p>
-        <h4 class="js-updateChal2 right-names">${chal2Input}</h4>
-      </section>
-      <section class="winner">
-        <h2 id="js-winner-name">${winnerName}</h2>
-        <h2 class="display-winner">WINNER</h2>
-      </section>
-      <section class="guesses-time">
-        <p>num-guesses</p>
-        <p>time</p>
-        <button class="close-btn" name="close">X</button>
-      </section>
-    </article>`
+  <section class="chall-names">
+  <h4 class="js-updateChal1 right-names">${chal1Input}</h4>
+  <p>vs</p>
+  <h4 class="js-updateChal2 right-names">${chal2Input}</h4>
+  </section>
+  <section class="winner">
+  <h2 id="js-winner-name">${winnerName}</h2>
+  <h2 class="display-winner">WINNER</h2>
+  </section>
+  <section class="guesses-time">
+  <p>num-guesses</p>
+  <p>time</p>
+  <button class="close-btn" name="close">X</button>
+  </section>
+  </article>`
   rightSide.innerHTML = newCard + rightSide.innerHTML;
 }
 
@@ -252,6 +254,18 @@ function resetGame(e) {
   clearButton.disabled = true;
 } 
 
+// Increase Range by an Interval of 10
+// !!!!^^^(INCOMPLETE)^^^!!!!
+// function incRng() {
+//   console.log('im working');
+//   minUpdate.innerText = minInput.value;
+//   maxUpdate.innerText = maxInput.value;
+//   min = parseInt(minInput.value);
+//   max = parseInt(maxInput.value);
+//   min += 10;
+//   max += 10;
+//   debugger;
+// }
 
 //ARE FIELDS EMPTY? ONLY WORKS FOR FIRST GUESS FIELD.
 //IMPLEMENT FOR LOOP TO TARGET SECOND AS WELL?
