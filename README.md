@@ -18,7 +18,7 @@ Finished. (Not Perfect)
 **Mobile**<br>
 ![mobile-size](https://user-images.githubusercontent.com/34728115/49945659-9a372200-feaa-11e8-82d6-2aafcb6732c8.png)
 
-##Static Comp:
+## Static Comp:
 ![num-guesser-comp](https://user-images.githubusercontent.com/34728115/49945302-cc944f80-fea9-11e8-9dbd-926ea311e9c7.jpg)
 
 ## Tech/framework used
