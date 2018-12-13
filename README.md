@@ -8,7 +8,7 @@ Our first group project, where we were put to the test!! We had to learn a lot o
 Finished. (Not Perfect)
  
 ## Screenshots
-##Finished Project:
+## Finished Project:
 **Full Screen**<br>
 ![our-project](https://user-images.githubusercontent.com/34728115/49945299-cb632280-fea9-11e8-843e-62ecc49ba70b.png)
 
