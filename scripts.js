@@ -20,13 +20,11 @@ var error = document.querySelector(".error-hidden");
 var error2 = document.querySelector(".error-hidden2");
 
 var guessError = document.querySelector(".guess-error-hidden")
+
 // RANDOM NUM VARIABLE
 var numGenerated
 
 //UPDATE FIELDS VARIABLES
-// var min = parseInt(minInput.value);
-// ???Why does this break the code????
-// var max = parseInt(maxInput.value);
 var minInput = document.querySelector("#js-min-input");
 var maxInput = document.querySelector("#js-max-input");
 
@@ -44,8 +42,8 @@ var getSubmit = document.querySelector("#js-submit");
 var lowHigh1 = document.querySelector(".js-low-high1");
 var lowHigh2 = document.querySelector(".js-low-high2");
 
-// WINNER NAME VARIABLE
-// var winnerName = document.querySelector(".js-winner-name");
+// RIGHT SIDE VARIABLE
+var rightSide = document.querySelector(".right-col");
 
 /////////////////////////////////////////////////////////////
 
@@ -62,6 +60,7 @@ guess1.addEventListener('keyup', areFieldsEmpty);
 
 guess2.addEventListener('keyup', areFieldsEmpty);
 
+rightSide.addEventListener('click', deleteCard);
 //////////////////////////////////////////////////////////
 
 //***************FUNCTIONS************************
@@ -152,8 +151,7 @@ function update() {
   }
 }
 
-
-// Functions to declare Winner
+// FUNCTIONS TO DECLARE WINNER
 function declareWinner(){
 	var winnerName = document.getElementById("js-winner-name");
 	if(guess1.value == numGenerated && guess2.value == numGenerated){
@@ -187,16 +185,14 @@ function player2Win(){
  }
 }
 
-var rightSide = document.querySelector(".right-col")
-rightSide.addEventListener('click', deleteCard)
-
+// FUNCTION TO DELETE CARD
 function deleteCard() {
   if(event.target.className === "close-btn"){
     event.target.parentElement.parentElement.remove();
   }
 }
 
-
+// FUNCTION TO CREATE CARD
 function createCard(name1, name2, winner) {
   var name1 = chal1Input.value;
   var name2 = chal2Input.value;
@@ -267,6 +263,3 @@ function areFieldsEmpty(e) {
   e.preventDefault();
   clearButton.disabled = false;
 }
-
-
-
